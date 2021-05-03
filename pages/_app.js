@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import './styles.scss';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+// import {Provider} from 'next-auth/client';
+
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    // <Provider
+    //   options={{keepAlive: 0, clientMaxAge: 3600}}
+    //   session={pageProps.session}
+    // >
+    <Component {...pageProps} />
+    // </Provider>
+  )
 }
 
-export default MyApp
