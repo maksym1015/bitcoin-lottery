@@ -1,64 +1,102 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from 'components/layout';
+import Banner from 'components/common/banner';
+import LotteryList from 'components/common/lottery-list';
+import ExLotteryList from 'components/common/exlottery-list';
+import ProductList from 'components/common/product-list';
+import CartPopup from 'components/home/cart-popup';
+import PlayGroup from 'components/home/play-group';
+import LottoResult from 'components/home/lotto-result';
+import Royalty from 'components/home/loyalty';
+import News from 'components/home/news';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import path from 'path';
+import fs from 'fs';
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+export default function Home(props) {
+	const { banners, lotteries, exlottos, products, results } = props;
+	return (
+		<Layout>
+			<Head><title>Bitcoin Lottery</title></Head>
+			<div id="main" className="clearfix">
+				{/* banner */}
+				<Banner banners={banners} />
+				<div className="clear" />
+				
+				{/* lottery list */}
+				<section className="sliderwrap lotto-owl-slider">
+					<LotteryList items={lotteries} />
+				</section>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+				{/* desktop content */}
+				<Link href="/lottery">
+					<a href="/lottery" className="view-all-lotts right">View all lotteries &gt; </a>
+				</Link>
+				<div className="clear" />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+				{/* exclusive lotteries */}
+				<section className="wrap">
+					<div className="wrap">
+						<ExLotteryList items={exlottos} />
+					</div>
+				</section>
+				<div className="clear">&nbsp;</div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+				{/* middle home */}
+				<section id="middle_home">
+					<div className="wrap">
+						<section id="middle_about">
+							<ProductList products={products} />
+						</section>
+						<section className="cart-popup">
+							<CartPopup />
+						</section>
+						<section className="wrap">
+							<div className="home-new-section-playgroup-result">
+								<PlayGroup />
+								<LottoResult items={results} />
+							</div>
+						</section>
+					</div>
+					<div id="middle_sec" style={{cursor: 'pointer'}}>
+						<div className="bannersignup" />
+					</div>
+					<section className="loyalty">
+						<Royalty />
+					</section>
+					<section id="middle_about" className="wrap news-section-new" >
+						<News />
+					</section>
+				</section>
+			</div>
+		</Layout>
+	)
+}
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+async function parseJsonFile(filePath) {
+	const dataPath = path.join(process.cwd(), filePath);
+	return new Promise((resolve, reject) => {
+		fs.readFile(dataPath, { encoding: 'utf-8' }, (err, data) => {
+			if (err) reject(err);
+			else resolve(data);
+		});
+	}).then(data => JSON.parse(data));
+}
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+export const getStaticProps = async (ctx) => {
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by Heroku
-        </a>
-      </footer>
-    </div>
-  )
+	const banners = await parseJsonFile('data/banners.json');
+	const lotteries = await parseJsonFile('data/lotteries.json');
+	const products = await parseJsonFile('data/products.json');
+	const results = await parseJsonFile('data/results.json');
+	return {
+		props:{
+			banners: banners.items,
+			lotteries: lotteries.lotteries,
+			exlottos: lotteries.exlottos,
+			products: products.items,
+			results: results.items
+		}
+	}
 }
