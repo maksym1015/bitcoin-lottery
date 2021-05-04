@@ -1,32 +1,102 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from 'components/layout';
 import Banner from 'components/common/banner';
+import LotteryList from 'components/common/lottery-list';
+import ExLotteryList from 'components/common/exlottery-list';
+import ProductList from 'components/common/product-list';
+import CartPopup from 'components/home/cart-popup';
+import PlayGroup from 'components/home/play-group';
+import LottoResult from 'components/home/lotto-result';
+import Royalty from 'components/home/loyalty';
+import News from 'components/home/news';
+
 import path from 'path';
 import fs from 'fs';
 
 export default function Home(props) {
-	const { banners } = props;
+	const { banners, lotteries, exlottos, products, results } = props;
 	return (
 		<Layout>
-			<Head>Bitcoin Lottery</Head>
-			<main>
-				<div id="main" className="clearfix">
-					<Banner banners={banners} />
-				</div>
-			</main>
+			<Head><title>Bitcoin Lottery</title></Head>
+			<div id="main" className="clearfix">
+				{/* banner */}
+				<Banner banners={banners} />
+				<div className="clear" />
+				
+				{/* lottery list */}
+				<section className="sliderwrap lotto-owl-slider">
+					<LotteryList items={lotteries} />
+				</section>
+
+				{/* desktop content */}
+				<Link href="/lottery">
+					<a href="/lottery" className="view-all-lotts right">View all lotteries &gt; </a>
+				</Link>
+				<div className="clear" />
+
+				{/* exclusive lotteries */}
+				<section className="wrap">
+					<div className="wrap">
+						<ExLotteryList items={exlottos} />
+					</div>
+				</section>
+				<div className="clear">&nbsp;</div>
+
+				{/* middle home */}
+				<section id="middle_home">
+					<div className="wrap">
+						<section id="middle_about">
+							<ProductList products={products} />
+						</section>
+						<section className="cart-popup">
+							<CartPopup />
+						</section>
+						<section className="wrap">
+							<div className="home-new-section-playgroup-result">
+								<PlayGroup />
+								<LottoResult items={results} />
+							</div>
+						</section>
+					</div>
+					<div id="middle_sec" style={{cursor: 'pointer'}}>
+						<div className="bannersignup" />
+					</div>
+					<section className="loyalty">
+						<Royalty />
+					</section>
+					<section id="middle_about" className="wrap news-section-new" >
+						<News />
+					</section>
+				</section>
+			</div>
 		</Layout>
 	)
 }
 
+async function parseJsonFile(filePath) {
+	const dataPath = path.join(process.cwd(), filePath);
+	return new Promise((resolve, reject) => {
+		fs.readFile(dataPath, { encoding: 'utf-8' }, (err, data) => {
+			if (err) reject(err);
+			else resolve(data);
+		});
+	}).then(data => JSON.parse(data));
+}
+
 export const getStaticProps = async (ctx) => {
 
-	const bannerPath = path.join(process.cwd(), 'data/banners.json');
-	const contents = await fs.readFileSync(bannerPath);
-	const banners = JSON.parse(contents);
-	console.log(banners);
+	const banners = await parseJsonFile('data/banners.json');
+	const lotteries = await parseJsonFile('data/lotteries.json');
+	const products = await parseJsonFile('data/products.json');
+	const results = await parseJsonFile('data/results.json');
 	return {
 		props:{
-			banners: banners.items
+			banners: banners.items,
+			lotteries: lotteries.lotteries,
+			exlottos: lotteries.exlottos,
+			products: products.items,
+			results: results.items
 		}
 	}
 }

@@ -1,16 +1,12 @@
-import BannerItem from 'components/common/banner_item';
+import BannerItem from 'components/common/banner-item';
 
 const Banner = ({banners}) => {
     return (
-        <>
-            <div id="owl-home-banner" className="owl-carousel owl-theme">
-                {banners.map((item, idx) => (
-                   <BannerItem {...item} key={idx} />
-                ))}
-            </div>
-            <div className="clear">
-            </div>
-        </>
+        <section id="owl-home-banner" className="owl-carousel owl-theme">
+            {banners && banners.map((item, idx) => (
+                <BannerItem {...item} key={idx} />
+            ))}
+        </section>
     )
 }
 

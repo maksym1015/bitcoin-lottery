@@ -14637,7 +14637,7 @@ input:focus {
     color        : white;
     font-size    : 30px;
     text-align   : center;
-    padding      : 14px 5px 0 5px;
+    padding      : 0;
     bottom       : 0;
     position     : absolute;
     margin       : 0 0 30px 30px;
@@ -16446,7 +16446,7 @@ body.page-template-default .inner-hadding {
 }
 
 body:not(.home) #main {
-    margin-bottom: 80px !important;
+    margin-bottom: 32px !important;
 }
 
 
@@ -22279,5 +22279,72 @@ a.button.goOn:hover {
     padding-left: 6px;
 }
 
+.text-center {
+    text-align: center !important;
+}
 
+footer {
+    margin-bottom: 20px;
+    background-color: #111724;
+    width: 100%;
+}
+
+footer .link-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 20px 0;
+}
+
+footer .link-list li {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+footer #gradient-bg {
+    background: #212b41;
+    border-top: 1px solid #32434b;
+    border-bottom: 1px solid #32434b;
+    padding: 30px 0 10px;
+}
+
+footer #gradient-bg .link-list li a {
+    color: #fff;
+}
+
+footer .link-list li a {
+    color: #aaa;
+    font-size: 16px;
+    font-family: Gilroy-Medium,sans-serif;
+}
+
+footer .page-list {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #32434b;
+}
+
+footer .age-18-plus {
+    padding: 30px;
+}
+
+footer .age-18-plus #age-18-plus-text {
+    color: #aaa;
+    font-size: 16px;
+    font-family: Gilroy-Medium,sans-serif;
+}
+
+.f_social_icon {
+    border-radius: 50px;
+    background-color: #fff;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f_social_icon i {
+    color: #000;
+    font-size: 16px;
+}
 /*HOME Page HTML CSS End*/

@@ -179,6 +179,84 @@ jQuery(document).ready(function(jQuery) {
         });
     });
 
+    jQuery('#owl-demo .slide').each(function () { 
+        var deadline = jQuery(this).data('date');
+        var number = jQuery(this).data('number');
+        var x = setInterval(function() { 
+            var now = new Date().getTime(); 
+            var timezoneOffset = new Date().getTimezoneOffset();
+            var t = (deadline + timezoneOffset*60*1000) - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            jQuery("#owl-demo .caro_clock_"+number).html('<div class="itemCt"><div class="itemBg">'+ days + 'd ' + hours + ':' + minutes + ':' + seconds + '</div></div>');
+    
+            if (t < 0) {
+                clearInterval(x);
+                jQuery("#owl-demo .caro_clock_"+number).html('<div class="itemExpired"><div class="itemBg">EXPIRED</div></div>');
+            }
+        }, 1000);
+    });
+
+    jQuery('.exclusive-lotteries .track').each(function () {
+        var self = this;
+        function countdownDrawDate(deadline) {
+            var number = jQuery(self).data('number');
+            if (!deadline) {
+                deadline = jQuery(self).data('date');
+                if (number === 1) {
+                    deadline += (-180*60*1000);
+                }
+            } else {
+                var timezoneOffset = new Date().getTimezoneOffset();
+                if (number === 1) {
+                    deadline += (-180 - timezoneOffset)*60*1000;
+                } else {
+                    deadline += timezoneOffset*60*1000;
+                }
+            }
+    
+            var x = setInterval(function() { 
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    
+                var formattedHours = hours < 10 ? '0' + hours : hours;
+                var formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+                var formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+    
+                if (t < 0) {
+                    clearInterval(x);
+                    jQuery(".exclusive-lotteries .caro_clock_"+number).html('<div class="itemExpired"><div class="itemBg">EXPIRED</div></div>');
+    
+                    if (number === 1) {
+                        
+                    }
+                } else {
+                    jQuery(".exclusive-lotteries .caro_clock_"+number).html('<div class="itemCt"><div class="itemBg">Next Draw: '+ formattedHours + ':' + formattedMinutes + ':' + formattedSeconds + '</div></div>');
+                }
+            }, 1000);
+        }
+        countdownDrawDate();
+    });
+    
+    jQuery(function ($) {
+        jQuery(this).find("#middle_sec")
+        .click(function(){
+            jQuery(".show-sign-up").click();
+        });
+    });
+
+    jQuery(function ($) {
+        jQuery(".btn-signup").click(function(){
+            jQuery(".show-sign-up").click();
+        });
+    });
+    
     jQuery(document).on("click", ".custom-dropdown-menu-button", function() {
         var currentDataShow = jQuery(this).attr('data-show');
         jQuery(this).closest(".custom-dropdown-menu").find(".custom-dropdown-menu-items").toggle();

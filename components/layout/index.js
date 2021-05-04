@@ -4,13 +4,13 @@ import Footer from './footer';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <main>
       <Head>
         <meta name="viewport" content="width=device-width" />
       </Head>
       <Header />
       {children}
       <Footer />
-    </>
+    </main>
   )
 }

@@ -1,5 +1,5 @@
 import './styles.scss';
-
+import '../public/styles/home.scss';
 // import {Provider} from 'next-auth/client';
 
 

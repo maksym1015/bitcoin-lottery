@@ -65,7 +65,7 @@ export default function Header() {
               </div>
             </a>
             <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a>
-            <a href="javascript:void(0);" className="header-bitcoin-values-buy show-sign-in deposit-page-nav-btn">Deposit Now</a>
+            <a href="#" className="header-bitcoin-values-buy show-sign-in deposit-page-nav-btn">Deposit Now</a>
           </div>
         </div>
         <div className="right_menu">

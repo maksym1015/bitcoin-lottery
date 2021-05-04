@@ -1,0 +1,195 @@
+{
+    "items": [
+        {
+            "name": "BTC Power Play",
+            "image": "images/btc power play1.png",
+            "date": "09.07.2020",
+            "scores": [
+                { "color": "blue", "value": 23 },
+                { "color": "blue", "value": 24 },
+                { "color": "blue", "value": 30 },
+                { "color": "blue", "value": 49 }
+            ]
+        },
+        {
+            "name": "MegaJackpot",
+            "image": "images/megajackpot1.png",
+            "date": "09.07.2020",
+            "scores": [
+                { "color": "blue", "value": 10 },
+                { "color": "blue", "value": 13 },
+                { "color": "blue", "value": 22 },
+                { "color": "blue", "value": 31 },
+                { "color": "blue", "value": 37 },
+                { "color": "blue", "value": 48 }
+            ]
+        },
+        {
+            "name": "NewYorkLotto",
+            "image": "images/newyorklotto1.png",
+            "date": "08.07.2020",
+            "scores": [
+                { "color": "blue", "value": 25 },
+                { "color": "blue", "value": 27 },
+                { "color": "blue", "value": 42 },
+                { "color": "blue", "value": 45 },
+                { "color": "blue", "value": 56 },
+                { "color": "blue", "value": 58 },
+                { "color": "green", "value": 58, "special": true }
+            ]
+        },
+        {
+            "name": "PowerBall",
+            "image": "images/powerball1.png",
+            "date": "08.07.2020",
+            "scores": [
+                { "color": "blue", "value": 3 },
+                { "color": "blue", "value": 10 },
+                { "color": "blue", "value": 34 },
+                { "color": "blue", "value": 36 },
+                { "color": "blue", "value": 62 },
+                { "color": "green", "value": 5 }
+            ]
+        },
+        {
+            "name": "Lotto649",
+            "image": "images/lotto6491.png",
+            "date": "08.07.2020",
+            "scores": [
+                { "color": "blue", "value": 11 },
+                { "color": "blue", "value": 26 },
+                { "color": "blue", "value": 28 },
+                { "color": "blue", "value": 35 },
+                { "color": "blue", "value": 37 },
+                { "color": "blue", "value": 47 },
+                { "color": "green", "value": 8, "special": true }
+            ]
+        },
+        {
+            "name": "UkLotto",
+            "image": "images/uklotto1.png",
+            "date": "08.07.2020",
+            "scores": [
+                { "color": "blue", "value": 5 },
+                { "color": "blue", "value": 18 },
+                { "color": "blue", "value": 22 },
+                { "color": "blue", "value": 31 },
+                { "color": "blue", "value": 50 },
+                { "color": "blue", "value": 59 },
+                { "color": "green", "value": 30, "special": true }
+            ]
+        },
+        {
+            "name": "BonoLoto",
+            "image": "images/bonoloto1.png",
+            "date": "08.07.2020",
+            "scores": [
+                { "color": "blue", "value": 7 },
+                { "color": "blue", "value": 13 },
+                { "color": "blue", "value": 20 },
+                { "color": "blue", "value": 23 },
+                { "color": "blue", "value": 28 },
+                { "color": "blue", "value": 37 },
+                { "color": "green", "value": 18, "special": true }
+            ]
+        },
+        {
+            "name": "MegaMillions",
+            "image": "images/megamillions1.png",
+            "date": "07.07.2020",
+            "scores": [
+                { "color": "blue", "value": 16 },
+                { "color": "blue", "value": 20 },
+                { "color": "blue", "value": 25 },
+                { "color": "blue", "value": 30 },
+                { "color": "blue", "value": 43 },
+                { "color": "green", "value": 18 }
+            ]
+        },
+        {
+            "name": "EuroMillions",
+            "image": "images/euromillions1.png",
+            "date": "07.07.2020",
+            "scores": [
+                { "color": "blue", "value": 12 },
+                { "color": "blue", "value": 16 },
+                { "color": "blue", "value": 23 },
+                { "color": "blue", "value": 33 },
+                { "color": "blue", "value": 41 },
+                { "color": "green", "value": 8 },
+                { "color": "green", "value": 10 }
+            ]
+        },
+        {
+            "name": "SuperEnalotto",
+            "image": "images/superenalotto1.png",
+            "date": "07.07.2020",
+            "scores": [
+                { "color": "blue", "value": 16 },
+                { "color": "blue", "value": 24 },
+                { "color": "blue", "value": 29 },
+                { "color": "blue", "value": 53 },
+                { "color": "blue", "value": 73 },
+                { "color": "blue", "value": 88 },
+                { "color": "green", "value": 62, "special": true }
+            ]
+        },
+        {
+            "name": "OzLotto",
+            "image": "images/ozlotto1.png",
+            "date": "07.07.2020",
+            "scores": [
+                { "color": "blue", "value": 4 },
+                { "color": "blue", "value": 5 },
+                { "color": "blue", "value": 7 },
+                { "color": "blue", "value": 9 },
+                { "color": "blue", "value": 12 },
+                { "color": "blue", "value": 13 },
+                { "color": "blue", "value": 32 },
+                { "color": "green", "value": 19, "special": true },
+                { "color": "green", "value": 35, "special": true }
+            ]
+        },
+        {
+            "name": "ElGordo",
+            "image": "images/elgordo1.png",
+            "date": "05.07.2020",
+            "scores": [
+                { "color": "blue", "value": 5 },
+                { "color": "blue", "value": 7 },
+                { "color": "blue", "value": 11 },
+                { "color": "blue", "value": 23 },
+                { "color": "blue", "value": 33 },
+                { "color": "green", "value": 4 }
+            ]
+        },
+        {
+            "name": "LaPrimitiva",
+            "image": "images/laprimitiva1.png",
+            "date": "04.07.2020",
+            "scores": [
+                { "color": "blue", "value": 4 },
+                { "color": "blue", "value": 7 },
+                { "color": "blue", "value": 12 },
+                { "color": "blue", "value": 15 },
+                { "color": "blue", "value": 36 },
+                { "color": "blue", "value": 41 },
+                { "color": "green", "value": 33, "special": true }
+            ]
+        },
+        {
+            "name": "EuroJackpot",
+            "image": "images/eurojackpot1.png",
+            "date": "03.07.2020",
+            "scores": [
+                { "color": "blue", "value": 12 },
+                { "color": "blue", "value": 34 },
+                { "color": "blue", "value": 36 },
+                { "color": "blue", "value": 47 },
+                { "color": "blue", "value": 48 },
+                { "color": "green", "value": 5 },
+                { "color": "green", "value": 7 }
+            ]
+        }
+    ]
+}
