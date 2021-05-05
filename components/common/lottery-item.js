@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import { formatNumber } from 'helpers/number';
 
 const LotteryItem = (props) => {
     const {
-        id, name, date, image, amount, link
+        id, name, date, image, unit, amount, link
     } = props;
     return (
         <div className={`slide ${name} track2`} data-track-name="slideWM" data-date={date} data-number={`${id}`}>
@@ -11,7 +12,7 @@ const LotteryItem = (props) => {
                     <img src={image} />
                 </div>
                 <div className="jackpot">
-                    <div className="jackpotAmount">{amount}</div>
+                    <div className="jackpotAmount">{`${unit} ${formatNumber(amount)}`}</div>
                 </div>
             </div>
             <div className="flexRow">

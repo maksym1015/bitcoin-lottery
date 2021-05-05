@@ -2954,11 +2954,6 @@ h4 {
     display: none;
 }
 
-#main {
-    margin-top: 64px;
-    padding   : 0px;
-}
-
 .bg-inner {
     background: url('/images/bg-inner-page.png') no-repeat top center;
     background: #13D19C;
@@ -19502,14 +19497,14 @@ body.home #header .has-child .submenu {
 
 /*CSS which is at HTML End*/
 @media screen and (max-width: 990px) {
-    body.home .wrap:not(.new_header_mobile_menu) {
+    /* body.home .wrap:not(.new_header_mobile_menu) {
         width         : 100% !important;
         max-width     : 100% !important;
         margin        : 0 !important;
         display       : flex;
         flex-direction: column;
         align-items   : center;
-    }
+    } */
 
     body.home #middle_home {
         padding-left : 15px !important;

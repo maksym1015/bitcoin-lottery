@@ -11,27 +11,10 @@ import PlayGroup from 'components/home/play-group';
 import LottoResult from 'components/home/lotto-result';
 import Royalty from 'components/home/loyalty';
 import News from 'components/home/news';
-import $ from 'jquery';
+import { parseJsonFile } from 'helpers/json';
 
-import path from 'path';
-import fs from 'fs';
 
 export default function Home(props) {
-
-	useEffect(() => {
-		// $(function ($) {
-		// 	$(this).find("#middle_sec")
-		// 	.click(function(){
-		// 		$(".show-sign-up").click();
-		// 	});
-		// });
-
-		// $(function ($) {
-		// 	$(".btn-signup").click(function(){
-		// 		$(".show-sign-up").click();
-		// 	});
-		// });
-	}, [])
 
 	const { banners, lotteries, exlottos, products, results } = props;
 	return (
@@ -90,16 +73,6 @@ export default function Home(props) {
 			</main>
 		</Layout>
 	)
-}
-
-async function parseJsonFile(filePath) {
-	const dataPath = path.join(process.cwd(), filePath);
-	return new Promise((resolve, reject) => {
-		fs.readFile(dataPath, { encoding: 'utf-8' }, (err, data) => {
-			if (err) reject(err);
-			else resolve(data);
-		});
-	}).then(data => JSON.parse(data));
 }
 
 export const getStaticProps = async (ctx) => {

@@ -6,6 +6,7 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <meta charSet="UTF-9" />
+                    <title>Bitcoin Lottery - Lottery with Bitcoins</title>
                     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
                     <link rel='stylesheet' id='fancybox-style-css' href='/styles/jquery.fancybox.css' type='text/css' media='all' />
                     <link rel='stylesheet' id='theme-jquery-ui-css' href='/styles/jquery-ui.css' type='text/css' media='all' />
