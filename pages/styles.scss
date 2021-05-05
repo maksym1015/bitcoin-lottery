@@ -200,6 +200,86 @@ img {
 	}
 }
 
+.header-bitcoin-values {
+    display    : flex;
+    align-items: center;
+
+    & .link {
+        line-height: 64px;
+
+        &:hover .header-bitcoin-values-item .title, &:hover .header-bitcoin-values-item .value {
+            color     : #00C38A;
+            transition: .3s;
+        }
+    }
+
+    & .header-bitcoin-values-buy {
+        margin-left  : 20px;
+        background   : #13D19C;
+        border-radius: 4px;
+        padding      : 8px 15px;
+        color        : #fff;
+        font-family  : 'Gilroy-Bold';
+        font-size    : 16px;
+        height       : unset;
+
+        &:hover {
+            background: #13d19cc9;
+            transition: .3s;
+        }
+    }
+}
+
+.new_header_mobile_menu .header-bitcoin-values {
+    & .link {
+        width: 45% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    &  .header-bitcoin-values-item > div {
+        display    : flex;
+        align-items: center;
+        flex-direction: row !important;
+        margin-right: 4px;
+
+        & .title, & .value {
+            margin-left: 4px;
+            line-height: 64px !important;
+        }
+    }
+}
+
+.header-bitcoin-values-item {
+    display    : flex;
+    margin-left: 20px;
+
+    & > div {
+        display    : flex;
+        margin-right: 4px;
+
+        &:last-child {
+            flex-direction: column;
+            margin-right: 0;
+        }
+    }
+
+    & .title, & .value {
+        color    : white;
+        font-size: 14px;
+    }
+
+    & .title {
+        color       : white;
+        font-family : Gilroy-Regular;
+        line-height: 16px;
+    }
+
+    & .value {
+        font-family: Gilroy-Bold;
+        line-height: 14px;
+    }
+}
 
 @media screen and (max-width: 1210px) {
 	#main {

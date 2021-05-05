@@ -18703,64 +18703,6 @@ body #middle.cart-page .mainpaymenttabsexist select {
     text-align   : center;
 }
 
-.header-bitcoin-values {
-    display    : flex;
-    align-items: center;
-}
-
-.header-bitcoin-values .header-bitcoin-values-link {
-    line-height: 64px;
-}
-
-.header-bitcoin-values .header-bitcoin-values-buy {
-    margin-left  : 20px;
-    background   : #13D19C;
-    border-radius: 4px;
-    padding      : 8px 15px;
-    color        : #fff;
-    font-family  : 'Gilroy-Bold';
-    font-size    : 16px;
-    height       : unset;
-}
-
-.header-bitcoin-values .header-bitcoin-values-buy:hover {
-    background: #13d19cc9;
-    transition: .3s;
-}
-
-.header-bitcoin-values .header-bitcoin-values-link:hover .header-bitcoin-values-item .header-bitcoin-values-item-title,
-.header-bitcoin-values .header-bitcoin-values-link:hover .header-bitcoin-values-item .header-bitcoin-values-item-value {
-    color     : #00C38A;
-    transition: .3s;
-}
-
-.header-bitcoin-values .header-bitcoin-values-item {
-    display    : flex;
-    margin-left: 20px;
-}
-
-.header-bitcoin-values .header-bitcoin-values-item>div {
-    display    : flex;
-    align-items: center;
-}
-
-.header-bitcoin-values .header-bitcoin-values-item .header-bitcoin-values-item-title {
-    margin-right: 10px;
-    margin-left : 10px;
-    color       : white;
-    font-family : Gilroy-Regular;
-}
-
-.header-bitcoin-values .header-bitcoin-values-item .header-bitcoin-values-item-title,
-.header-bitcoin-values .header-bitcoin-values-item .header-bitcoin-values-item-value {
-    color    : white;
-    font-size: 14px;
-}
-
-.header-bitcoin-values .header-bitcoin-values-item .header-bitcoin-values-item-value {
-    font-family: Gilroy-Bold;
-}
-
 /** news page */
 
 body.single-post .hadding {
@@ -19995,45 +19937,6 @@ body #header {
     width        : 100%;
     top          : 0;
     z-index      : 2;
-}
-
-
-
-@media screen and (max-width: 1373px) and (min-width: 990px) {
-    .right_menu button.signin {
-        padding: 10px 5px;
-    }
-
-    .right_menu button.register {
-        padding    : 10px 5px;
-        margin-left: 5px;
-    }
-
-    .header-bitcoin-values .header-bitcoin-values-buy {
-        padding    : 8px 5px;
-        font-size  : 14px;
-        margin-left: 10px;
-    }
-
-    .right_menu {
-        padding: 0 10px;
-    }
-
-    .header-bitcoin-values .header-bitcoin-values-item {
-        margin-left: 10px;
-    }
-
-    .left_menu a.new_header_menu_logo {
-        padding: 0 10px;
-    }
-
-    .left_menu a.new_header_menu_logo img {
-        width: 200px;
-    }
-
-    .left_menu ul li {
-        padding-right: 10px;
-    }
 }
 
 .slider_content {

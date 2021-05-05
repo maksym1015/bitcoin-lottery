@@ -1,9 +1,14 @@
 import Link from 'next/link';
+import HeaderCoin from 'components/common/header-coin';
+import supported_coins from 'data/coins.json';
 
 // The approach used in this component shows how to built a sign in and sign out
 // component that works on pages which support both client and server side
 // rendering, and avoids any flash incorrect content on initial page load.
 export default function Header() {
+
+  const { coins } = supported_coins;
+  console.log(coins);
 
   return (
     <header id="header" className="clearfix">
@@ -33,35 +38,11 @@ export default function Header() {
             </li>
           </ul>
           <div className="header-bitcoin-values">
-            <a href="/lottery" className="header-bitcoin-values-link">
-              <div className="header-bitcoin-values-item">
-                <div>
-                  <img src="images/bch.png" />
-                </div>
-                <div>
-                  <div className="header-bitcoin-values-item-title">
-                    BCH
-                  </div>
-                  <div className="header-bitcoin-values-item-value header-bitcoin-values-item-bch-value">
-                    &#36;0
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="/lottery" className="header-bitcoin-values-link">
-              <div className="header-bitcoin-values-item">
-                <div>
-                  <img src="images/btc.png" />
-                  
-                  <div className="header-bitcoin-values-item-title">
-                    BTC
-                  </div>
-                  <div className="header-bitcoin-values-item-value header-bitcoin-values-item-btc-value">
-                    &#36;0
-                  </div>
-                </div>
-              </div>
-            </a>
+            {coins && coins.map(coin => (
+              <Link key={coin.id} href="/lottery">
+                <a className='link'><HeaderCoin {...coin} /></a>
+              </Link>
+            ))}
             <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a>
             <a href="#" className="header-bitcoin-values-buy show-sign-in deposit-page-nav-btn">Deposit Now</a>
           </div>
@@ -87,11 +68,11 @@ export default function Header() {
         <div id="menu-container">
           <ul className="wrap-top-menu">
             <li className=""><a href="/lottery">Lottery</a></li>
-            <li className=""><a href="/lottery-results.html">Results</a></li>
+            <li className=""><a href="/lottery-results">Results</a></li>
             <li className=""><a href="https://cashgames.bitcoin.com/home" target="_blank">Casino</a></li>
             <li className="has-child mobile-menu">
               <div>
-                <a href="/about-us.html">About</a>
+                <a href="/about-us">About</a>
                 <div className="arrow_down_button">
                   <svg className="arrowsvg" width="20" height="20" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L6.92766 7L13 1" strokeWidth="2" />
@@ -120,36 +101,11 @@ export default function Header() {
             <li className="header_mobile_menu_bitcoin_values_part">
               <div className="header-bitcoin-values">
                 <a href="deposit" className="header-bitcoin-values-buy deposit-page-nav-btn">Deposit</a>
-                <a href="/lottery" className="header-bitcoin-values-link">
-                  <div className="header-bitcoin-values-item">
-                    <div>
-                      <img src="images/bch.png" />
-                      <div className="header-bitcoin-values-item-title">
-                        BCH
-                      </div>
-                    </div>
-                    <div>
-                      <div className="header-bitcoin-values-item-value header-bitcoin-values-item-bch-value">
-                        &#36;0
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/lottery" className="header-bitcoin-values-link">
-                  <div className="header-bitcoin-values-item">
-                    <div>
-                      <img src="images/btc.png" />
-                      <div className="header-bitcoin-values-item-title">
-                        BTC
-                      </div>
-                    </div>
-                    <div>
-                      <div className="header-bitcoin-values-item-value header-bitcoin-values-item-btc-value">
-                        &#36;0
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                {coins && coins.map(coin => (
+                  <Link key={coin.id} href="/lottery">
+                    <a className='link'><HeaderCoin {...coin} /></a>
+                  </Link>
+                ))}
                 <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a>
               </div>
             </li>
