@@ -55,10 +55,10 @@ export default function Footer() {
 					<div className="page-list text-center grayout">
 						<ul className="link-list">
 							<li><a href="/faq/">FAQ</a></li>
-							<li><a href="javascript:void(0)" className="contact-us-modal">Contact Us</a></li>
+							<li><a href="#" className="contact-us-modal">Contact Us</a></li>
 							<li><a href="/promotions/">Promotion</a></li>
-							<li><a href="javascript:void(0)" className="tc-modal">Terms of Service</a></li>
-							<li><a href="javascript:void(0)" className="privacy-modal">Private Policy</a></li>
+							<li><a href="#" className="tc-modal">Terms of Service</a></li>
+							<li><a href="#" className="privacy-modal">Private Policy</a></li>
 						</ul>
 					</div>
 					<div className="payment-list text-center">
