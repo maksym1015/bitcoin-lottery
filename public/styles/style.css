@@ -3826,27 +3826,6 @@ h4 {
 /* ------------------------------------------------------------ *\
    Header Style
 \* ------------------------------------------------------------ */
-#header {
-    /*background: #ffffff;*/
-    background     : #fff;
-    /*border-bottom: 5px solid rgba(220,220,220, 0.7);*/
-    border-bottom  : 5px solid #fff;
-}
-
-#header .logo {
-    position     : absolute;
-    /*margin-top : 5px;*/
-    margin-top   : 0px;
-    z-index      : 999999;
-    height       : 84px;
-    width        : 241px;
-    float        : left;
-    display      : inline-block;
-    /* background: url(images/logo.png) no-repeat 0 0; */
-    background   : url('/images/lwg_logo.png') no-repeat 0 0;
-    text-indent  : -4000px;
-}
-
 #header .wrap-top-menu {
     position: relative;
 
@@ -19117,7 +19096,7 @@ body #header {
     z-index      : 2;
 }
 
-.new_header_menu {
+/* .new_header_menu {
     display   : block;
     width     : 100%;
     position  : fixed;
@@ -19241,7 +19220,7 @@ body.home #header .has-child .submenu {
 
 .has-child .submenu li {
     padding: 10px 10px 10px 10px;
-}
+} 
 
 @media screen and (max-width: 1373px) and (min-width: 990px) {
     .right_menu button.signin {
@@ -19279,7 +19258,7 @@ body.home #header .has-child .submenu {
         padding-right: 10px;
     }
 }
-
+*/
 .blur {
     display: none;
 }
@@ -20514,127 +20493,7 @@ body #header {
     z-index      : 2;
 }
 
-.new_header_menu {
-    display   : block;
-    width     : 100%;
-    position  : fixed;
-    height    : 64px;
-    background: linear-gradient(180deg, #111724 0%, #090E18 100%);
-}
 
-.left_menu {
-    display   : inline-flex;
-    align-self: center;
-    height    : 100%;
-}
-
-.left_menu>ul {
-    display   : inline-flex;
-    align-self: center;
-    height    : 100%;
-}
-
-.left_menu a.new_header_menu_logo {
-    padding   : 0 25px;
-    align-self: center;
-}
-
-.left_menu ul li a {
-    font-family: Gilroy-bold;
-    font-size  : 14px;
-    line-height: 16px;
-    color      : #FFFFFF;
-    transition : .3s;
-}
-
-.left_menu ul li {
-    padding-right: 25px;
-    display      : flex;
-    align-items  : center;
-}
-
-.left_menu ul li a:hover {
-    color     : #00C38A;
-    transition: .3s;
-}
-
-.right_menu button.signin {
-    background   : linear-gradient(180deg, #131720 0%, #12151B 100%);
-    box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    background   : none !important;
-    border       : 0;
-    color        : #fff;
-    padding      : 10px 15px;
-    transition   : .8s;
-    font-family  : Gilroy-Bold;
-    font-size    : 13px;
-    line-height  : 15px;
-}
-
-.right_menu button.register {
-    background   : linear-gradient(180deg, #131720 0%, #12151B 100%);
-    box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    background   : none !important;
-    border       : 0;
-    color        : #fff;
-    padding      : 10px 15px;
-    margin-left  : 25px;
-    transition   : .8s;
-    font-family  : Gilroy-Bold;
-    font-size    : 13px;
-    line-height  : 15px;
-}
-
-.right_menu {
-    padding: 15px 25px;
-    float  : right;
-}
-
-.right_menu button:hover {
-    background   : linear-gradient(180deg, #15D6A0 0%, #0AC18E 100%) !important;
-    box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px #FFFFFF;
-    border-radius: 3px;
-    transition   : .8s;
-}
-
-.right_menu button img {
-    padding: 0 10px;
-}
-
-.left_menu ul li a .arrowsvg {
-    stroke    : #fff;
-    transition: .3s;
-}
-
-.left_menu ul li a:hover .arrowsvg {
-    stroke    : #00C38A;
-    transition: .3s;
-}
-
-.has-child {
-    position: relative;
-}
-
-.has-child .submenu {
-    position  : absolute;
-    top       : 64px;
-    left      : -10px;
-    display   : block;
-    background: linear-gradient(180deg, rgba(10, 12, 17, 0.12) 0%, rgba(19, 23, 32, 0.36) 100%);
-    z-index   : 55;
-    min-width : 170px;
-    background: #111724;
-}
-
-body.home #header .has-child .submenu {
-    background: #121d1f;
-}
-
-.has-child .submenu li {
-    padding: 10px 10px 10px 10px;
-}
 
 @media screen and (max-width: 1373px) and (min-width: 990px) {
     .right_menu button.signin {

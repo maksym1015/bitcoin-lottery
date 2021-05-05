@@ -15,7 +15,7 @@ export default function Footer() {
 				<div className="right close-modal"><span className="fa fa-close" rel="modal:close"></span></div>
 				<div className="modal-header">TERMS AND CONDITIONS</div>
 				<div className="modal-body">
-					<iframe src="pdf/tc.pdf" width="100%" height="100%" style={{width: '100%', height: '100%'}} frameborder="0" scrolling="no"></iframe>
+					{/* <iframe src="pdf/tc.pdf" width="100%" height="100%" style={{width: '100%', height: '100%'}} frameborder="0" scrolling="no"></iframe> */}
 					<div className="top_toolbar"></div>
 				</div>
 			</div>
@@ -25,7 +25,7 @@ export default function Footer() {
 				<div className="right close-modal"><span className="fa fa-close" rel="modal:close"></span></div>
 				<div className="modal-header">PRIVACY POLICY</div>
 				<div className="modal-body">
-					<iframe src="pdf/privacy.pdf" width="100%" height="100%" style={{width: '100%', height: '100%'}} frameborder="0" scrolling="no"></iframe>
+					{/* <iframe src="pdf/privacy.pdf" width="100%" height="100%" style={{width: '100%', height: '100%'}} frameborder="0" scrolling="no"></iframe> */}
 					<div className="top_toolbar"></div>
 				</div>
 			</div>

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import styles from './header.module.css'
 
 // The approach used in this component shows how to built a sign in and sign out
 // component that works on pages which support both client and server side
@@ -8,25 +7,25 @@ export default function Header() {
 
   return (
     <header id="header" className="clearfix">
-      <div className="new_header_menu">
-        <div className="left_menu">
-          <Link href="#">
-            <a className="new_header_menu_logo">
-                  <img src="images/bitcoinlottery@2x-1.png" />
+      <div className='menu'>
+        <div className='left_menu'>
+          <Link href="/">
+            <a className='logo'>
+              <img src="images/bitcoinlottery@2x-1.png" />
             </a>
           </Link>
           <ul>
             <li className=""><Link href="/lottery">Lottery</Link></li>
             <li className=""><Link href="/lottery-results">Results</Link></li>
             <li className=""><Link href="https://cashgames.bitcoin.com/home" target="_blank">Casino</Link></li>
-            <li className="has-child  ">
+            <li className="has-child">
               <a href="/about-us">
-                About
+                About&nbsp;
 				        <svg className="arrowsvg" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 					        <path d="M1 1L6.92766 7L13 1" strokeWidth="2" />
                 </svg>
               </a>
-              <ul className="submenu" style={{ display: "none" }}>
+              <ul className="submenu">
                 <li><a href="/faq">FAQ</a></li>
                 <li><a className="contact-us-modal" href="#">Contact Us</a></li>
                 <li><a className="tc-modal" href="#">Terms and Conditions</a></li>
@@ -38,11 +37,11 @@ export default function Header() {
               <div className="header-bitcoin-values-item">
                 <div>
                   <img src="images/bch.png" />
+                </div>
+                <div>
                   <div className="header-bitcoin-values-item-title">
                     BCH
                   </div>
-                </div>
-                <div>
                   <div className="header-bitcoin-values-item-value header-bitcoin-values-item-bch-value">
                     &#36;0
                   </div>
@@ -53,11 +52,10 @@ export default function Header() {
               <div className="header-bitcoin-values-item">
                 <div>
                   <img src="images/btc.png" />
+                  
                   <div className="header-bitcoin-values-item-title">
                     BTC
                   </div>
-                </div>
-                <div>
                   <div className="header-bitcoin-values-item-value header-bitcoin-values-item-btc-value">
                     &#36;0
                   </div>
@@ -69,7 +67,7 @@ export default function Header() {
           </div>
         </div>
         <div className="right_menu">
-          <div className="">
+          <div className="login-register">
             <button type="button" className="signin show-sign-in"><img src="images/icon-login.png" />Log in</button>
             <button type="button" className="register show-sign-up"><img src="images/icon-register.png" />Register</button>
           </div>
