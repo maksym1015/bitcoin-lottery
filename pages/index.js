@@ -18,7 +18,7 @@ export default function Home(props) {
 	const { banners, lotteries, exlottos, products, results } = props;
 	return (
 		<Layout>
-			<Head><title>Bitcoin Lottery</title></Head>
+			<Head><title>Bitcoin Lottery - Lottery with Bitcoins</title></Head>
 			<div id="main" className="clearfix">
 				{/* banner */}
 				<Banner banners={banners} />
@@ -46,12 +46,12 @@ export default function Home(props) {
 				{/* middle home */}
 				<section id="middle_home">
 					<div className="wrap">
-						<section id="middle_about">
+						{/* <section id="middle_about">
 							<ProductList products={products} />
 						</section>
 						<section className="cart-popup">
 							<CartPopup />
-						</section>
+						</section> */}
 						<section className="wrap">
 							<div className="home-new-section-playgroup-result">
 								<PlayGroup />

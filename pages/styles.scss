@@ -7,11 +7,232 @@ body {
   height: 100vh;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
+}
+
+.points_box:before,
+.points_box p:after,
+.clearfix:before,
+.clearfix:after {
+    content : ".";
+    display : block;
+    height  : 0;
+    overflow: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+    /* IE < 8 */
+
+    &:after {
+        clear: both;
+    }
+}
+
+a img {
+    border: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+// header css
+#header {
+	background: linear-gradient(180deg, rgba(10, 12, 17, 0.12) 0%, rgba(19, 23, 32, 0.36) 100%);
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 2;
+
+	& .menu {
+		display: block;
+		width: 100%;
+		position: fixed;
+		height: 64px;
+		background: linear-gradient(180deg, #111724 0%, #090E18 100%);
+
+		& .left_menu {
+			display: inline-flex;
+			align-self: center;
+			height: 100%;
+
+			& a.logo {
+				padding: 0 15px;
+				align-self: center;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			@media screen and (max-width: 1373px) and (min-width: 990px) {
+				& a.logo {
+					padding: 0 10px;
+				}
+			}
+
+			& > ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				display: flex;
+				align-items: center;
+
+				& li {
+	 				display: block;
+					border-bottom: 3px solid transparent;
+					
+					&:hover {
+						background-color: #000;
+						border-bottom: 3px solid #00C38A;
+					}
+				}
+				& li a {
+					font-family: Gilroy-bold;
+					transition: .3s;
+					line-height: 50px;
+					height: 47px;
+					color: #fff;
+					padding: 0 8px;
+					font-size: 14px;
+					vertical-align: middle;
+					display: inline-block;
+
+					& .arrowsvg{
+						stroke: #fff;
+						transition: .3s;
+					}
+
+					&:hover {
+						color: #fff;
+						transition: .3s;
+
+						& .arrowsvg{
+							stroke: #00C38A; 
+							transition: .3s;
+						}
+					}
+				}
+			}
+		}
+
+		& .right_menu {
+			float: right;
+
+			& .login-register {
+				margin: 14px 15px 14px 0px;
+			}
+		
+			& button.signin {
+				background: linear-gradient(180deg, #131720 0%, #12151B 100%);
+				box-shadow: 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
+				border-radius: 3px;
+				background: none!important;
+				border: 0;
+				color: #fff;
+				padding: 10px 5px;
+				transition: .8s;
+				font-family: Gilroy-Bold;
+				font-size: 13px;
+				line-height: 15px;
+			}
+		
+			& button.register {
+				background: linear-gradient(180deg, #131720 0%, #12151B 100%);
+				box-shadow: 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
+				border-radius: 3px;
+				background: none!important;
+				border: 0;
+				color: #fff;
+				padding: 10px 5px;
+				margin-left: 5px;
+				transition: .8s; 
+				font-family: Gilroy-Bold;
+				font-size: 13px;
+				line-height: 15px;
+			}
+		
+			& button:hover{
+				background: linear-gradient(180deg, #15D6A0 0%, #0AC18E 100%)!important;
+				box-shadow: 0px 2px 4px #000000, inset 0px 0.51px 0px #FFFFFF;
+				border-radius: 3px;
+				transition: .8s;        
+			}
+
+			& button img {
+				padding: 0 10px;
+			}
+		}
+	}
+	
+	& .header-title-main {
+		font-family: Montserrat, sans-serif;
+		font-weight: 700;
+		letter-spacing: -2px;
+		font-size: 22px;
+		vertical-align: middle;
+	}
+}
+
+.has-child {
+    position: relative;
+
+	& .submenu {
+		position: absolute;
+		top: 47px;
+		left: -10px;
+		display: none;
+		background: linear-gradient(180deg, rgba(10, 12, 17, 0.12) 0%, rgba(19, 23, 32, 0.36) 100%);
+		z-index: 55;
+		min-width: 170px;
+		background: #111724;
+
+		& li {
+			padding: 10px 0;
+			display: block;
+		}
+	}
+
+	&:hover .submenu {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1373px) and (min-width: 990px) {
+	.right_menu button.signin {
+		padding: 10px 5px;
+	}
+
+	.right_menu button.register {
+		padding    : 10px 5px;
+		margin-left: 5px;
+	}
+
+	.header-bitcoin-values .header-bitcoin-values-buy {
+		padding    : 8px 5px;
+		font-size  : 14px;
+		margin-left: 10px;
+	}
+
+	.right_menu {
+		padding: 0 10px;
+	}
+
+	.header-bitcoin-values .header-bitcoin-values-item {
+		margin-left: 10px;
+	}
+
+	.left_menu a.new_header_menu_logo {
+		padding: 0 10px;
+	}
+
+	.left_menu a.new_header_menu_logo img {
+		width: 200px;
+	}
+
+	.left_menu ul li {
+		padding-right: 10px;
+	}
 }
