@@ -55,9 +55,11 @@ export default function Header() {
         </div>
       </div>
       <div className="wrap new_header_mobile_menu">
-        <a className="new_header_menu_logo" href="#">
-          <img src="images/bitcoinlottery@2x-1.png" />
-        </a>
+        <Link href="/">
+          <a className="new_header_menu_logo">
+            <img src="images/bitcoinlottery@2x-1.png" />
+          </a>  
+        </Link>
         <a href="#" data-href="nav" className="mobile-trigger trigger-nav">
           <i>
             <span className="line-1"></span>

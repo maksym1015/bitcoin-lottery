@@ -3,7 +3,7 @@
         {
             "name": "BTC Power Play",
             "image": "images/btc power play1.png",
-            "date": "09.07.2020",
+            "date": "09/07/2020",
             "scores": [
                 { "color": "blue", "value": 23 },
                 { "color": "blue", "value": 24 },
@@ -14,7 +14,7 @@
         {
             "name": "MegaJackpot",
             "image": "images/megajackpot1.png",
-            "date": "09.07.2020",
+            "date": "09/07/2020",
             "scores": [
                 { "color": "blue", "value": 10 },
                 { "color": "blue", "value": 13 },
@@ -27,7 +27,7 @@
         {
             "name": "NewYorkLotto",
             "image": "images/newyorklotto1.png",
-            "date": "08.07.2020",
+            "date": "08/07/2020",
             "scores": [
                 { "color": "blue", "value": 25 },
                 { "color": "blue", "value": 27 },
@@ -41,7 +41,7 @@
         {
             "name": "PowerBall",
             "image": "images/powerball1.png",
-            "date": "08.07.2020",
+            "date": "08/07/2020",
             "scores": [
                 { "color": "blue", "value": 3 },
                 { "color": "blue", "value": 10 },
@@ -54,7 +54,7 @@
         {
             "name": "Lotto649",
             "image": "images/lotto6491.png",
-            "date": "08.07.2020",
+            "date": "08/07/2020",
             "scores": [
                 { "color": "blue", "value": 11 },
                 { "color": "blue", "value": 26 },
@@ -68,7 +68,7 @@
         {
             "name": "UkLotto",
             "image": "images/uklotto1.png",
-            "date": "08.07.2020",
+            "date": "08/07/2020",
             "scores": [
                 { "color": "blue", "value": 5 },
                 { "color": "blue", "value": 18 },
@@ -82,7 +82,7 @@
         {
             "name": "BonoLoto",
             "image": "images/bonoloto1.png",
-            "date": "08.07.2020",
+            "date": "08/07/2020",
             "scores": [
                 { "color": "blue", "value": 7 },
                 { "color": "blue", "value": 13 },
@@ -96,7 +96,7 @@
         {
             "name": "MegaMillions",
             "image": "images/megamillions1.png",
-            "date": "07.07.2020",
+            "date": "07/07/2020",
             "scores": [
                 { "color": "blue", "value": 16 },
                 { "color": "blue", "value": 20 },
@@ -109,7 +109,7 @@
         {
             "name": "EuroMillions",
             "image": "images/euromillions1.png",
-            "date": "07.07.2020",
+            "date": "07/07/2020",
             "scores": [
                 { "color": "blue", "value": 12 },
                 { "color": "blue", "value": 16 },
@@ -123,7 +123,7 @@
         {
             "name": "SuperEnalotto",
             "image": "images/superenalotto1.png",
-            "date": "07.07.2020",
+            "date": "07/07/2020",
             "scores": [
                 { "color": "blue", "value": 16 },
                 { "color": "blue", "value": 24 },
@@ -137,7 +137,7 @@
         {
             "name": "OzLotto",
             "image": "images/ozlotto1.png",
-            "date": "07.07.2020",
+            "date": "07/07/2020",
             "scores": [
                 { "color": "blue", "value": 4 },
                 { "color": "blue", "value": 5 },
@@ -153,7 +153,7 @@
         {
             "name": "ElGordo",
             "image": "images/elgordo1.png",
-            "date": "05.07.2020",
+            "date": "05/07/2020",
             "scores": [
                 { "color": "blue", "value": 5 },
                 { "color": "blue", "value": 7 },
@@ -166,7 +166,7 @@
         {
             "name": "LaPrimitiva",
             "image": "images/laprimitiva1.png",
-            "date": "04.07.2020",
+            "date": "04/07/2020",
             "scores": [
                 { "color": "blue", "value": 4 },
                 { "color": "blue", "value": 7 },
@@ -180,7 +180,7 @@
         {
             "name": "EuroJackpot",
             "image": "images/eurojackpot1.png",
-            "date": "03.07.2020",
+            "date": "03/07/2020",
             "scores": [
                 { "color": "blue", "value": 12 },
                 { "color": "blue", "value": 34 },
