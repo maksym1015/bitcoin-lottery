@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from 'components/layout';
@@ -10,16 +11,33 @@ import PlayGroup from 'components/home/play-group';
 import LottoResult from 'components/home/lotto-result';
 import Royalty from 'components/home/loyalty';
 import News from 'components/home/news';
+import $ from 'jquery';
 
 import path from 'path';
 import fs from 'fs';
 
 export default function Home(props) {
+
+	useEffect(() => {
+		// $(function ($) {
+		// 	$(this).find("#middle_sec")
+		// 	.click(function(){
+		// 		$(".show-sign-up").click();
+		// 	});
+		// });
+
+		// $(function ($) {
+		// 	$(".btn-signup").click(function(){
+		// 		$(".show-sign-up").click();
+		// 	});
+		// });
+	}, [])
+
 	const { banners, lotteries, exlottos, products, results } = props;
 	return (
 		<Layout>
 			<Head><title>Bitcoin Lottery - Lottery with Bitcoins</title></Head>
-			<div id="main" className="clearfix">
+			<main id="main" className="clearfix">
 				{/* banner */}
 				<Banner banners={banners} />
 				<div className="clear" />
@@ -46,12 +64,12 @@ export default function Home(props) {
 				{/* middle home */}
 				<section id="middle_home">
 					<div className="wrap">
-						{/* <section id="middle_about">
+						<section id="middle_about">
 							<ProductList products={products} />
 						</section>
 						<section className="cart-popup">
 							<CartPopup />
-						</section> */}
+						</section>
 						<section className="wrap">
 							<div className="home-new-section-playgroup-result">
 								<PlayGroup />
@@ -69,7 +87,7 @@ export default function Home(props) {
 						<News />
 					</section>
 				</section>
-			</div>
+			</main>
 		</Layout>
 	)
 }

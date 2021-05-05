@@ -5,7 +5,7 @@ const ProductList = (props) => {
     return (
         <div className="cart-products">
             {/* <div className="row row-special" style="display:none;"> */}
-            <div className="row row-special">
+            <div className="row row-special" style={{display: 'none'}}>
                 {products && products.map((item, idx) => (
                     <ProductItem {...item} key={idx} />
                 ))}

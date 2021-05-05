@@ -27,7 +27,7 @@ class MyDocument extends Document {
                     <script type='text/javascript' src='/js/jquery.simplyscroll.js'></script>
                     <script type='text/javascript' src='/js/jquery.modal.min.js'></script>
                 </Head>
-                <body>
+                <body className='home'>
                     <Main />
                     <NextScript />
                     <script type='text/javascript' src='/js/mobile.js'></script>

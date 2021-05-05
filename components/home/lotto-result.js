@@ -1,8 +1,18 @@
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect } from 'react'
 import LottoResultItem from './result-item';
 
 const LottoResult = (props) => {
+    useEffect(() => {
+        jQuery("#scroller").simplyScroll({
+            customClass: 'vert',
+            orientation: 'vertical',
+            auto: true,
+            manualMode: 'loop',
+            speed: 1,
+            pauseOnTouch: true
+        });
+    }, [])
     const { items } = props;
     return (
         <div className="lotto-results-section">
