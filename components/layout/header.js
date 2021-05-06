@@ -8,7 +8,6 @@ import supported_coins from 'data/coins.json';
 export default function Header() {
 
   const { coins } = supported_coins;
-  console.log(coins);
 
   return (
     <header id="header" className="clearfix">

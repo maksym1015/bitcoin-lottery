@@ -6,7 +6,6 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <meta charSet="UTF-9" />
-                    <title>Bitcoin Lottery - Lottery with Bitcoins</title>
                     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
                     <link rel='stylesheet' id='fancybox-style-css' href='/styles/jquery.fancybox.css' type='text/css' media='all' />
                     <link rel='stylesheet' id='theme-jquery-ui-css' href='/styles/jquery-ui.css' type='text/css' media='all' />
@@ -19,7 +18,7 @@ class MyDocument extends Document {
                     <link rel='stylesheet' id='theme-owl-carousel-custom-css' href='/styles/owl.carousel.custom.css' type='text/css' media='all' />
                     <link rel='stylesheet' id='theme-owl-carousel-custom-css' href='/styles/font-awesome.min.css' type='text/css' media='all' />
                     <link rel='stylesheet' id='theme-styles-css' href='/styles/style.css' type='text/css' media='all' />
-                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossOrigin="anonymous" />
                     <link rel="stylesheet" id="open-sans-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&amp;subset=latin%2Clatin-ext&amp;ver=4.5.14" type="text/css" media="all"></link>
 
                     <script type='text/javascript' src='/js/jquery.js'></script>
