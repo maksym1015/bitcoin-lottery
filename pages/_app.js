@@ -5,18 +5,18 @@ import '../public/styles/home.scss';
 
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    // <Provider
-    //   options={{keepAlive: 0, clientMaxAge: 3600}}
-    //   session={pageProps.session}
-    // >
-    <>
-      <Head>
-        <title>Bitcoin Lottery - Lottery with Bitcoins</title>
-      </Head>
-      <Component {...pageProps} />
-    </>
-    // </Provider>
-  )
+	return (
+		// <Provider
+		//   options={{keepAlive: 0, clientMaxAge: 3600}}
+		//   session={pageProps.session}
+		// >
+		<>
+			<Head>
+				<title>Bitcoin Lottery - Lottery with Bitcoins</title>
+			</Head>
+			<Component {...pageProps} />
+		</>
+		// </Provider>
+	)
 }
 
