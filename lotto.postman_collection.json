@@ -1528,6 +1528,272 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cashier",
+			"item": [
+				{
+					"name": "prepare order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/prepare-order",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"prepare-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "processor confirm order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/processor-confirm-order",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"processor-confirm-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get member payment methods",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/get-member-payment-methods",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"get-member-payment-methods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit funds",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/deposit-funds",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"deposit-funds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "processor confirm fire game order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/processor-confirm-fire-game-order",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"processor-confirm-fire-game-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "processor confirm deposit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/process-confirm-deposit",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"process-confirm-deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "credit vouchers deposit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/CreditVouchers-deposit",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"CreditVouchers-deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "processor confirm raffle game order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "LWG0699w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api1.braviotechnology.com/cashier/processor-confirm-raffle-game-order",
+							"protocol": "https",
+							"host": [
+								"api1",
+								"braviotechnology",
+								"com"
+							],
+							"path": [
+								"cashier",
+								"processor-confirm-raffle-game-order"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
