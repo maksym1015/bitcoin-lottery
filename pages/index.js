@@ -24,7 +24,7 @@ export default function Home(props) {
 				{/* banner */}
 				<Banner banners={banners} />
 				<div className="clear" />
-				
+
 				{/* lottery list */}
 				<section className="sliderwrap lotto-owl-slider">
 					<LotteryList items={lotteries} />
@@ -60,7 +60,7 @@ export default function Home(props) {
 							</div>
 						</section>
 					</div>
-					<div id="middle_sec" style={{cursor: 'pointer'}}>
+					<div id="middle_sec" style={{ cursor: 'pointer' }}>
 						<div className="bannersignup" />
 					</div>
 					<section className="loyalty">
@@ -82,7 +82,7 @@ export const getStaticProps = async (ctx) => {
 	const products = await parseJsonFile('data/products.json');
 	const results = await parseJsonFile('data/results.json');
 	return {
-		props:{
+		props: {
 			banners: banners.items,
 			lotteries: lotteries.lotteries,
 			exlottos: lotteries.exlottos,

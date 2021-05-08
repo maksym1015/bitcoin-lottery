@@ -1,78 +1,78 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin : 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #main {
-    margin-top: 64px;
-    margin-bottom: 64px;
-    padding   : 0px;
+	margin-top   : 64px;
+	margin-bottom: 64px;
+	padding      : 0px;
 
-    & p {
-        margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 26px;
-        color: #ffffff;
-        font-family: 'Gilroy-Regular';
-    }
+	& p {
+		margin-bottom: 10px;
+		font-size    : 18px;
+		line-height  : 26px;
+		color        : #ffffff;
+		font-family  : 'Gilroy-Regular';
+	}
 }
 
 .points_box:before,
 .points_box p:after,
 .clearfix:before,
 .clearfix:after {
-    content : ".";
-    display : block;
-    height  : 0;
-    overflow: hidden;
+	content : ".";
+	display : block;
+	height  : 0;
+	overflow: hidden;
 }
 
 .clearfix {
-    zoom: 1;
-    /* IE < 8 */
+	zoom: 1;
+	/* IE < 8 */
 
-    &:after {
-        clear: both;
-    }
+	&:after {
+		clear: both;
+	}
 }
 
 a img {
-    border: 0;
+	border: 0;
 }
 
 img {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 // header css
 #header {
 	background: linear-gradient(180deg, rgba(10, 12, 17, 0.12) 0%, rgba(19, 23, 32, 0.36) 100%);
-	position: absolute;
-	width: 100%;
-	top: 0;
-	z-index: 2;
+	position  : absolute;
+	width     : 100%;
+	top       : 0;
+	z-index   : 2;
 
 	& .menu {
-		display: block;
-		width: 100%;
-		position: fixed;
-		height: 64px;
+		display   : block;
+		width     : 100%;
+		position  : fixed;
+		height    : 64px;
 		background: linear-gradient(180deg, #111724 0%, #090E18 100%);
 
 		& .left_menu {
-			display: inline-flex;
+			display   : inline-flex;
 			align-self: center;
-			height: 100%;
+			height    : 100%;
 
 			& a.logo {
-				padding: 0 15px;
+				padding   : 0 15px;
 				align-self: center;
 
 				&:hover {
@@ -86,44 +86,45 @@ img {
 				}
 			}
 
-			& > ul {
-				margin: 0;
-				padding: 0;
+			&>ul {
+				margin         : 0;
+				padding        : 0;
 				list-style-type: none;
-				display: flex;
-				align-items: center;
+				display        : flex;
+				align-items    : center;
 
 				& li {
-	 				display: block;
+					display      : block;
 					border-bottom: 3px solid transparent;
-					
+
 					&:hover {
 						background-color: #000;
-						border-bottom: 3px solid #00C38A;
+						border-bottom   : 3px solid #00C38A;
 					}
 				}
-				& li a {
-					font-family: Gilroy-bold;
-					transition: .3s;
-					line-height: 50px;
-					height: 47px;
-					color: #fff;
-					padding: 0 8px;
-					font-size: 14px;
-					vertical-align: middle;
-					display: inline-block;
 
-					& .arrowsvg{
-						stroke: #fff;
+				& li a {
+					font-family   : Gilroy-bold;
+					transition    : .3s;
+					line-height   : 50px;
+					height        : 47px;
+					color         : #fff;
+					padding       : 0 8px;
+					font-size     : 14px;
+					vertical-align: middle;
+					display       : inline-block;
+
+					& .arrowsvg {
+						stroke    : #fff;
 						transition: .3s;
 					}
 
 					&:hover {
-						color: #fff;
+						color     : #fff;
 						transition: .3s;
 
-						& .arrowsvg{
-							stroke: #00C38A; 
+						& .arrowsvg {
+							stroke    : #00C38A;
 							transition: .3s;
 						}
 					}
@@ -132,47 +133,47 @@ img {
 		}
 
 		& .right_menu {
-			float: right;
+			float  : right;
 			display: block;
 
 			& .login-register {
 				margin: 14px 15px 14px 0px;
 			}
-		
+
 			& button.signin {
-				background: linear-gradient(180deg, #131720 0%, #12151B 100%);
-				box-shadow: 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
+				background   : linear-gradient(180deg, #131720 0%, #12151B 100%);
+				box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
 				border-radius: 3px;
-				background: none!important;
-				border: 0;
-				color: #fff;
-				padding: 10px 5px;
-				transition: .8s;
-				font-family: Gilroy-Bold;
-				font-size: 13px;
-				line-height: 15px;
+				background   : none !important;
+				border       : 0;
+				color        : #fff;
+				padding      : 10px 5px;
+				transition   : .8s;
+				font-family  : Gilroy-Bold;
+				font-size    : 13px;
+				line-height  : 15px;
 			}
-		
+
 			& button.register {
-				background: linear-gradient(180deg, #131720 0%, #12151B 100%);
-				box-shadow: 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
+				background   : linear-gradient(180deg, #131720 0%, #12151B 100%);
+				box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
 				border-radius: 3px;
-				background: none!important;
-				border: 0;
-				color: #fff;
-				padding: 10px 5px;
-				margin-left: 5px;
-				transition: .8s; 
-				font-family: Gilroy-Bold;
-				font-size: 13px;
-				line-height: 15px;
+				background   : none !important;
+				border       : 0;
+				color        : #fff;
+				padding      : 10px 5px;
+				margin-left  : 5px;
+				transition   : .8s;
+				font-family  : Gilroy-Bold;
+				font-size    : 13px;
+				line-height  : 15px;
 			}
-		
-			& button:hover{
-				background: linear-gradient(180deg, #15D6A0 0%, #0AC18E 100%)!important;
-				box-shadow: 0px 2px 4px #000000, inset 0px 0.51px 0px #FFFFFF;
+
+			& button:hover {
+				background   : linear-gradient(180deg, #15D6A0 0%, #0AC18E 100%) !important;
+				box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px #FFFFFF;
 				border-radius: 3px;
-				transition: .8s;        
+				transition   : .8s;
 			}
 
 			& button img {
@@ -180,27 +181,27 @@ img {
 			}
 		}
 	}
-	
+
 	& .header-title-main {
-		font-family: Montserrat, sans-serif;
-		font-weight: 700;
+		font-family   : Montserrat, sans-serif;
+		font-weight   : 700;
 		letter-spacing: -2px;
-		font-size: 22px;
+		font-size     : 22px;
 		vertical-align: middle;
 	}
 }
 
 .has-child {
-    position: relative;
+	position: relative;
 
 	& .submenu {
-		position: absolute;
-		top: 47px;
-		left: -10px;
-		display: none;
+		position  : absolute;
+		top       : 47px;
+		left      : -10px;
+		display   : none;
 		background: linear-gradient(180deg, rgba(10, 12, 17, 0.12) 0%, rgba(19, 23, 32, 0.36) 100%);
-		z-index: 55;
-		min-width: 170px;
+		z-index   : 55;
+		min-width : 170px;
 		background: #111724;
 
 		& li {
@@ -215,84 +216,87 @@ img {
 }
 
 .header-bitcoin-values {
-    display    : flex;
-    align-items: center;
+	display    : flex;
+	align-items: center;
 
-    & .link {
-        line-height: 64px;
+	& .link {
+		line-height: 64px;
 
-        &:hover .header-bitcoin-values-item .title, &:hover .header-bitcoin-values-item .value {
-            color     : #00C38A;
-            transition: .3s;
-        }
-    }
+		&:hover .header-bitcoin-values-item .title,
+		&:hover .header-bitcoin-values-item .value {
+			color     : #00C38A;
+			transition: .3s;
+		}
+	}
 
-    & .header-bitcoin-values-buy {
-        margin-left  : 20px;
-        background   : #13D19C;
-        border-radius: 4px;
-        padding      : 8px 15px;
-        color        : #fff;
-        font-family  : 'Gilroy-Bold';
-        font-size    : 16px;
-        height       : unset;
+	& .header-bitcoin-values-buy {
+		margin-left  : 20px;
+		background   : #13D19C;
+		border-radius: 4px;
+		padding      : 8px 15px;
+		color        : #fff;
+		font-family  : 'Gilroy-Bold';
+		font-size    : 16px;
+		height       : unset;
 
-        &:hover {
-            background: #13d19cc9;
-            transition: .3s;
-        }
-    }
+		&:hover {
+			background: #13d19cc9;
+			transition: .3s;
+		}
+	}
 }
 
 .new_header_mobile_menu .header-bitcoin-values {
-    & .link {
-        width: 45% !important;
-        display: flex;
-        justify-content: center;
-    }
+	& .link {
+		width          : 45% !important;
+		display        : flex;
+		justify-content: center;
+	}
 
-    &  .header-bitcoin-values-item > div {
-        display    : flex;
-        align-items: center;
-        flex-direction: row !important;
-        margin-right: 4px;
+	& .header-bitcoin-values-item>div {
+		display       : flex;
+		align-items   : center;
+		flex-direction: row !important;
+		margin-right  : 4px;
 
-        & .title, & .value {
-            margin-left: 4px;
-            line-height: 64px !important;
-        }
-    }
+		& .title,
+		& .value {
+			margin-left: 4px;
+			line-height: 64px !important;
+		}
+	}
 }
 
 .header-bitcoin-values-item {
-    display    : flex;
-    margin-left: 20px;
+	display    : flex;
+	margin-left: 20px;
 
-    & > div {
-        display    : flex;
-        margin-right: 4px;
+	&>div {
+		display     : flex;
+		margin-right: 4px;
 
-        &:last-child {
-            flex-direction: column;
-            margin-right: 0;
-        }
-    }
+		&:last-child {
+			flex-direction: column;
+			margin-right  : 0;
+		}
+	}
 
-    & .title, & .value {
-        color    : white;
-        font-size: 14px;
-    }
+	& .title,
+	& .value {
+		color    : white;
+		font-size: 14px;
+	}
 
-    & .title {
-        color       : white;
-        font-family : Gilroy-Regular;
-        line-height: 16px;
-    }
+	& .title {
+		color      : white;
+		font-family: Gilroy-Regular;
+		line-height: 16px;
+	}
 
-    & .value {
-        font-family: Gilroy-Bold;
-        line-height: 14px;
-    }
+	& .value {
+		font-family: Gilroy-Bold;
+		line-height: 14px;
+	}
 }
 
 @media screen and (max-width: 1250px) {
@@ -300,498 +304,498 @@ img {
 		display: none;
 	}
 
-    .wrap-my-account .my-account-tabs-overlay #horizontalTab {
-        display      : block;
-        margin-bottom: 20px;
-    }
-
-    .wrap-my-account #horizontalTab ul li.r-tabs-tab.my-account-tabs-bonus-box {
-        width: auto;
-    }
-
-    .header_mobile_menu_bitcoin_values_part {
-        position: absolute;
-        left    : 0;
-        bottom  : 0;
-    }
-
-    .footer-mobile-fixed {
-        display: flex;
-    }
-
-    .wrap-my-account .my-account-tabs-overlay {
-        display        : flex;
-        justify-content: space-between;
-        width          : 100%;
-        flex-direction : column;
-    }
-
-    .lotterydetail .lt_numbers_wrapper {
-        grid-template-columns: repeat(9, 1fr);
-    }
-
-    .lotterydetail .select_num_part_wrapper {
-        grid-template-columns: repeat(9, 1fr);
-    }
-
-    .wrap-my-account .my-account-tabs-overlay #horizontalTab ul {
-        display       : flex;
-        flex-direction: row;
-        padding-bottom: 3px;
-        overflow-x    : auto;
-        margin-bottom : 20px;
-    }
-
-    .wrap-my-account #horizontalTab ul li.r-tabs-tab {
-        margin: 0 10px !important;
-    }
-
-    .wrap-my-account #horizontalTab ul li.r-tabs-tab:not(:first-child) a {
-        height         : 100%;
-        display        : flex;
-        flex-direction : column;
-        justify-content: space-between;
-        padding        : 10px 10px 20px 10px;
-        box-sizing     : border-box;
-    }
-
-    .wrap-my-account #my_payments_detail .ico-payments,
-    .wrap-my-account #mytransactions .ico-transactions,
-    .wrap-my-account #my_tickets .ico-tabs,
-    .wrap-my-account #my_products .ico-products {
-        margin: auto !important;
-    }
-
-    .wrap-my-account {
-        display       : flex;
-        flex-direction: column;
-    }
-
-    .wrap-my-account #user-info-box {
-        flex-wrap: wrap;
-    }
-
-    .wrap-my-account #user-info-box .btns_box {
-        max-width      : 100%;
-        flex-direction : row;
-        height         : 50px;
-        justify-content: space-between;
-        margin-bottom  : 20px;
-    }
-
-    .wrap-my-account #user-info-box .btns_box .btn {
-        height: 100%;
-        width : 45%;
-    }
-
-    .wrap-my-account #user-info-box .part {
-        width        : 48%;
-        min-width    : unset;
-        max-width    : unset;
-        margin-bottom: 20px;
-    }
-
-    .wrap-my-account .my-account-tabs-overlay #user-details {
-        margin: 0;
-    }
-
-    .wrap-my-account .account_form {
-        display       : flex;
-        flex-direction: column;
-    }
-
-    #signin .fname {
-        padding   : 0 15px !important;
-        box-sizing: border-box;
-    }
-
-    #signin .fname input {
-        width     : 100% !important;
-        box-sizing: border-box;
-    }
-
-    #signin .checkcontainer {
-        font-size : 15px !important;
-        width     : calc(100% - 30px) !important;
-        display   : flex !important;
-        margin    : 10px auto !important;
-        box-sizing: border-box;
-        float     : unset !important;
-    }
-
-    #signin .button2 {
-        width          : calc(100% - 30px) !important;
-        margin         : 0 auto;
-        display        : flex;
-        float          : unset !important;
-        justify-content: center;
-        align-items    : center;
-    }
-
-    .reg-right .fname {
-        padding      : 7px 15px !important;
-        margin-top   : 0 !important;
-        border       : 1px solid #ccc;
-        margin-bottom: 10px;
-        font-family  : Gilroy-medium;
-        font-size    : 18px !important;
-        line-height  : 0;
-        color        : #212529 !important;
-        opacity      : 0.5;
-        position     : relative;
-    }
-
-    #signin .for {
-        display: flex;
-        width  : 100%;
-        padding: 0 15px;
-    }
-
-
-    #sign-in-form.signinform .close-signup-signin {
-        position: relative;
-        right   : 0;
-        top     : 0;
-    }
-
-    #sign-in-form.signinform .close-signup-signin img {
-        margin-top   : 0px !important;
-        margin-bottom: 0px !important;
-        margin-right : 0px !important;
-    }
-
-    #sign-in-form {
-        margin-left: 0 !important;
-        width      : 90% !important;
-    }
-
-    #header {
-        padding: 0 !important;
-        height : auto !important;
-    }
-
-    #header.clearfix:before,
-    #header.clearfix:after {
-        content: none !important;
-    }
-
-
-    body.home #header,
-    body.page-template-default #header,
-    body #header {
-        z-index    : 100000 !important;
-        display    : flex;
-        align-items: center;
-        box-sizing : border-box;
-    }
-
-    .wrap.new_header_mobile_menu {
-        position       : relative;
-        height         : 60px;
-        background     : #111724;
-        display        : flex;
-        justify-content: space-between;
-        align-items    : center;
-        max-width      : 100% !important;
-        padding        : 0 20px;
-        width          : 100% !important;
-        box-sizing     : border-box;
-    }
-
-    .wrap.new_header_mobile_menu .new_header_menu_logo {
-        max-width: 200px;
-    }
-
-    .wrap.new_header_mobile_menu .new_header_menu_logo img {
-        width : 100%;
-        height: auto;
-    }
-
-    .wrap.new_header_mobile_menu .mobile-trigger {
-        display          : inline-block;
-        vertical-align   : middle;
-        width            : 37px;
-        height           : 34px;
-        padding          : 10px 11px;
-        background       : #191c25;
-        border-radius    : 3px;
-        box-sizing       : border-box;
-        -ms-transform    : translateY(0);
-        -webkit-transform: translateY(0);
-        transform        : translateY(0);
-        margin-top       : 0 !important;
-    }
-
-    .wrap.new_header_mobile_menu #menu-container {
-        position  : absolute;
-        top       : 100%;
-        left      : 0;
-        height    : 0;
-        overflow  : hidden;
-        width     : 100%;
-        background: #111724;
-        transition: ease-in-out 0.5s;
-    }
-
-    #header.show-nav .wrap.new_header_mobile_menu #menu-container {
-        height: calc(100vh - 60px);
-    }
-
-    .wrap.new_header_mobile_menu #menu-container li.has-child.mobile-menu {
-        display       : flex;
-        flex-direction: column;
-    }
-
-    .wrap.new_header_mobile_menu #menu-container li.has-child.mobile-menu .submenu {
-        position: relative;
-        top     : unset;
-        left    : unset;
-        padding : 0 0 0 10px;
-    }
-
-    .wrap.new_header_mobile_menu #menu-container li button {
-        background   : transparent;
-        padding      : 20px;
-        margin       : 0 20px;
-        box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
-        border-radius: 3px;
-        border       : 0;
-        color        : #fff;
-        transition   : .8s;
-        font-family  : Gilroy-Bold;
-        font-size    : 13px;
-        line-height  : 15px;
-    }
-
-    .wrap.new_header_mobile_menu #menu-container li button {
-        margin-bottom: 20px;
-    }
-
-    .wrap.new_header_mobile_menu #menu-container li button img {
-        margin-right: 10px;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu {
-        position  : relative !important;
-        background: transparent;
-        z-index   : 999999;
-        width     : 100% !important;
-        float     : unset;
-        right     : unset !important;
-        top       : unset !important;
-        height    : 100%;
-    }
-
-    .wrap.new_header_mobile_menu #menu-container button,
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li {
-        width      : 100%;
-        font-size  : 17px;
-        font-family: 'Gilroy-Regular';
-        color      : white;
-        box-sizing : border-box;
-        display    : flex;
-    }
-
-    li.has-child.mobile-menu.active {
-        background: #00C38A;
-    }
-
-    li.has-child.mobile-menu.active .submenu {
-        display: unset !important;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li:hover button,
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li:not(.has-child.mobile-menu):not(.header_mobile_menu_bitcoin_values_part):hover a {
-        background: #00C38A;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values {
-        display        : flex;
-        flex-wrap      : wrap;
-        justify-content: space-between;
-        width          : 100%;
-        box-sizing     : border-box;
-        padding        : 30px 20px;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values-item {
-        margin-left: 0;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values-link {
-        width          : 48%;
-        display        : flex;
-        justify-content: center;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values-buy {
-        margin    : 0 auto !important;
-        text-align: center;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li:hover button {
-        margin: 0 20px 20px 20px !important;
-    }
-
-    #header .wrap.new_header_mobile_menu .wrap-top-menu li a {
-        width      : 100%;
-        padding    : 20px;
-        font-size  : 17px;
-        font-family: 'Gilroy-Regular';
-        color      : white;
-        box-sizing : border-box;
-    }
-
-
-    #header.show-nav .new_header_menu .top-menu {
-        display : block;
-        position: absolute;
-    }
-
-    .new_header_menu .mobile-trigger {
-        float     : right;
-        display   : inline-block;
-        margin-top: 30px;
-    }
-
-    .new_header_menu {
-        display: none !important;
-    }
-
-    .lotterydetail .cardlist {
-        display       : flex;
-        flex-direction: column;
-        max-height    : unset;
-        margin        : 0;
-    }
-
-    .lotterydetail .cardlist .tabin_main_select {
-        flex-direction: column;
-    }
-
-
-    .lottery-result .allresult_table td:nth-of-type(5) {
-        display: unset
-    }
-
-    .lottery-result .allresult_table th {
-        padding-left: 11px !important;
-    }
-
-    body.page .main-content h1 {
-        margin-bottom: 10px;
-        margin-top   : 40px;
-    }
-
-    body.page-template-default .bg-inner {
-        display: none;
-    }
-
-    body.page .main-content h1 {
-        font-size  : 35px;
-        line-height: 1;
-    }
-
-    #user-details .table_style_1 table {
-        min-width: 600px;
-    }
-
-    /* #my_tickets_data > .drawer-header */
-
-    #tabs-5>div,
-    #tabs-4>div,
-    .table_style_1 .payment_method {
-        overflow-x: scroll;
-    }
-
-    #tabs-5 .my_table_main>div,
-    #tabs-4 .my_table_main>div {
-        min-width: 900px;
-    }
-
-    #tabs-4 .my_table_main #my_tickets_data {
-        display       : flex;
-        flex-direction: column;
-    }
-
-    #tabs-4 .my_table_main table th,
-    #tabs-4 .my_table_main table td {
-        width: 14% !important;
-    }
-
-    .table_style_1 th:nth-of-type(1),
-    td:nth-of-type(1) {
-        display: table-cell;
-    }
-
-    #user-details .table_style_1 .payment_method table tbody .payment-method-row:not(.selected)+tr td:nth-of-type(1) {
-        display: none !important;
-    }
-
-    .reg-right .fname span {
-        position: absolute;
-    }
-
-    .wrap-my-account .my-account-tabs-overlay #user-details #myaccount_detail .account_form #change_password,
-    .wrap-my-account .my-account-tabs-overlay #user-details #myaccount_detail .account_form #myaccount_update {
-        box-sizing: border-box;
-        height    : 50px;
-    }
-
-    table.tablesorter.lotteries-table.mobile-lotto-table tr td:nth-child(1),
-    table.tablesorter.lotteries-table.mobile-lotto-table tr td:nth-child(3),
-    table.tablesorter.lotteries-table.mobile-lotto-table thead tr th:nth-child(1),
-    table.tablesorter.lotteries-table.mobile-lotto-table thead tr th:nth-child(3) {
-        display: table-cell !important;
-    }
-
-    #middle.lottery-result .tablesorter-result thead tr th,
-    #middle.view-all-lottery .lotteries-table thead tr .header {
-        padding  : 10px 5px;
-        font-size: 16px;
-    }
-
-    #middle.lottery-result .tablesorter-result tbody td,
-    #middle.view-all-lottery .lotteries-table tbody td {
-        padding: 0 5px;
-    }
-
-    .lotterydetail .beton-header {
-        flex-direction : column;
-        height         : auto;
-        justify-content: center;
-        padding        : 10px;
-        box-sizing     : border-box;
-    }
-
-    .clubform.mainpaymenttabs {
-        margin-top: 0 !important;
-    }
-
-    .home-download-cash-app-section {
-        max-width: 100%;
-    }
-
-    .deposit_amount-description {
-        text-align: center;
-    }
-
-    .widthdrawpage .widthdrawmoneydown .widthdrawmoneydowninner .widthdrawmoneydowninnerwrapper {
-        flex-direction: column;
-        align-items   : center;
-    }
-
-    .widthdrawpage .widthdrawmoneydown .widthdrawmoneydowninner .widthdrawmoneydowninnerwrapper>div {
-        margin       : 0;
-        margin-bottom: 10px;
-    }
-
-    .widthdrawpage .widthdrawmoneydown .widthdrawmoneydowninner .widthdrawmoneydowninnerwrapper .howmuchwuthdrawinputtext input[type="text"] {
-        width: 100%;
-    }
-
-    .myaccount_detail_error,
-    .cardupdatemsg {
-        text-align: center;
-    }
+	.wrap-my-account .my-account-tabs-overlay #horizontalTab {
+		display      : block;
+		margin-bottom: 20px;
+	}
+
+	.wrap-my-account #horizontalTab ul li.r-tabs-tab.my-account-tabs-bonus-box {
+		width: auto;
+	}
+
+	.header_mobile_menu_bitcoin_values_part {
+		position: absolute;
+		left    : 0;
+		bottom  : 0;
+	}
+
+	.footer-mobile-fixed {
+		display: flex;
+	}
+
+	.wrap-my-account .my-account-tabs-overlay {
+		display        : flex;
+		justify-content: space-between;
+		width          : 100%;
+		flex-direction : column;
+	}
+
+	.lotterydetail .lt_numbers_wrapper {
+		grid-template-columns: repeat(9, 1fr);
+	}
+
+	.lotterydetail .select_num_part_wrapper {
+		grid-template-columns: repeat(9, 1fr);
+	}
+
+	.wrap-my-account .my-account-tabs-overlay #horizontalTab ul {
+		display       : flex;
+		flex-direction: row;
+		padding-bottom: 3px;
+		overflow-x    : auto;
+		margin-bottom : 20px;
+	}
+
+	.wrap-my-account #horizontalTab ul li.r-tabs-tab {
+		margin: 0 10px !important;
+	}
+
+	.wrap-my-account #horizontalTab ul li.r-tabs-tab:not(:first-child) a {
+		height         : 100%;
+		display        : flex;
+		flex-direction : column;
+		justify-content: space-between;
+		padding        : 10px 10px 20px 10px;
+		box-sizing     : border-box;
+	}
+
+	.wrap-my-account #my_payments_detail .ico-payments,
+	.wrap-my-account #mytransactions .ico-transactions,
+	.wrap-my-account #my_tickets .ico-tabs,
+	.wrap-my-account #my_products .ico-products {
+		margin: auto !important;
+	}
+
+	.wrap-my-account {
+		display       : flex;
+		flex-direction: column;
+	}
+
+	.wrap-my-account #user-info-box {
+		flex-wrap: wrap;
+	}
+
+	.wrap-my-account #user-info-box .btns_box {
+		max-width      : 100%;
+		flex-direction : row;
+		height         : 50px;
+		justify-content: space-between;
+		margin-bottom  : 20px;
+	}
+
+	.wrap-my-account #user-info-box .btns_box .btn {
+		height: 100%;
+		width : 45%;
+	}
+
+	.wrap-my-account #user-info-box .part {
+		width        : 48%;
+		min-width    : unset;
+		max-width    : unset;
+		margin-bottom: 20px;
+	}
+
+	.wrap-my-account .my-account-tabs-overlay #user-details {
+		margin: 0;
+	}
+
+	.wrap-my-account .account_form {
+		display       : flex;
+		flex-direction: column;
+	}
+
+	#signin .fname {
+		padding   : 0 15px !important;
+		box-sizing: border-box;
+	}
+
+	#signin .fname input {
+		width     : 100% !important;
+		box-sizing: border-box;
+	}
+
+	#signin .checkcontainer {
+		font-size : 15px !important;
+		width     : calc(100% - 30px) !important;
+		display   : flex !important;
+		margin    : 10px auto !important;
+		box-sizing: border-box;
+		float     : unset !important;
+	}
+
+	#signin .button2 {
+		width          : calc(100% - 30px) !important;
+		margin         : 0 auto;
+		display        : flex;
+		float          : unset !important;
+		justify-content: center;
+		align-items    : center;
+	}
+
+	.reg-right .fname {
+		padding      : 7px 15px !important;
+		margin-top   : 0 !important;
+		border       : 1px solid #ccc;
+		margin-bottom: 10px;
+		font-family  : Gilroy-medium;
+		font-size    : 18px !important;
+		line-height  : 0;
+		color        : #212529 !important;
+		opacity      : 0.5;
+		position     : relative;
+	}
+
+	#signin .for {
+		display: flex;
+		width  : 100%;
+		padding: 0 15px;
+	}
+
+
+	#sign-in-form.signinform .close-signup-signin {
+		position: relative;
+		right   : 0;
+		top     : 0;
+	}
+
+	#sign-in-form.signinform .close-signup-signin img {
+		margin-top   : 0px !important;
+		margin-bottom: 0px !important;
+		margin-right : 0px !important;
+	}
+
+	#sign-in-form {
+		margin-left: 0 !important;
+		width      : 90% !important;
+	}
+
+	#header {
+		padding: 0 !important;
+		height : auto !important;
+	}
+
+	#header.clearfix:before,
+	#header.clearfix:after {
+		content: none !important;
+	}
+
+
+	body.home #header,
+	body.page-template-default #header,
+	body #header {
+		z-index    : 100000 !important;
+		display    : flex;
+		align-items: center;
+		box-sizing : border-box;
+	}
+
+	.wrap.new_header_mobile_menu {
+		position       : relative;
+		height         : 60px;
+		background     : #111724;
+		display        : flex;
+		justify-content: space-between;
+		align-items    : center;
+		max-width      : 100% !important;
+		padding        : 0 20px;
+		width          : 100% !important;
+		box-sizing     : border-box;
+	}
+
+	.wrap.new_header_mobile_menu .new_header_menu_logo {
+		max-width: 200px;
+	}
+
+	.wrap.new_header_mobile_menu .new_header_menu_logo img {
+		width : 100%;
+		height: auto;
+	}
+
+	.wrap.new_header_mobile_menu .mobile-trigger {
+		display          : inline-block;
+		vertical-align   : middle;
+		width            : 37px;
+		height           : 34px;
+		padding          : 10px 11px;
+		background       : #191c25;
+		border-radius    : 3px;
+		box-sizing       : border-box;
+		-ms-transform    : translateY(0);
+		-webkit-transform: translateY(0);
+		transform        : translateY(0);
+		margin-top       : 0 !important;
+	}
+
+	.wrap.new_header_mobile_menu #menu-container {
+		position  : absolute;
+		top       : 100%;
+		left      : 0;
+		height    : 0;
+		overflow  : hidden;
+		width     : 100%;
+		background: #111724;
+		transition: ease-in-out 0.5s;
+	}
+
+	#header.show-nav .wrap.new_header_mobile_menu #menu-container {
+		height: calc(100vh - 60px);
+	}
+
+	.wrap.new_header_mobile_menu #menu-container li.has-child.mobile-menu {
+		display       : flex;
+		flex-direction: column;
+	}
+
+	.wrap.new_header_mobile_menu #menu-container li.has-child.mobile-menu .submenu {
+		position: relative;
+		top     : unset;
+		left    : unset;
+		padding : 0 0 0 10px;
+	}
+
+	.wrap.new_header_mobile_menu #menu-container li button {
+		background   : transparent;
+		padding      : 20px;
+		margin       : 0 20px;
+		box-shadow   : 0px 2px 4px #000000, inset 0px 0.51px 0px rgba(255, 255, 255, 0.3);
+		border-radius: 3px;
+		border       : 0;
+		color        : #fff;
+		transition   : .8s;
+		font-family  : Gilroy-Bold;
+		font-size    : 13px;
+		line-height  : 15px;
+	}
+
+	.wrap.new_header_mobile_menu #menu-container li button {
+		margin-bottom: 20px;
+	}
+
+	.wrap.new_header_mobile_menu #menu-container li button img {
+		margin-right: 10px;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu {
+		position  : relative !important;
+		background: transparent;
+		z-index   : 999999;
+		width     : 100% !important;
+		float     : unset;
+		right     : unset !important;
+		top       : unset !important;
+		height    : 100%;
+	}
+
+	.wrap.new_header_mobile_menu #menu-container button,
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li {
+		width      : 100%;
+		font-size  : 17px;
+		font-family: 'Gilroy-Regular';
+		color      : white;
+		box-sizing : border-box;
+		display    : flex;
+	}
+
+	li.has-child.mobile-menu.active {
+		background: #00C38A;
+	}
+
+	li.has-child.mobile-menu.active .submenu {
+		display: unset !important;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li:hover button,
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li:not(.has-child.mobile-menu):not(.header_mobile_menu_bitcoin_values_part):hover a {
+		background: #00C38A;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values {
+		display        : flex;
+		flex-wrap      : wrap;
+		justify-content: space-between;
+		width          : 100%;
+		box-sizing     : border-box;
+		padding        : 30px 20px;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values-item {
+		margin-left: 0;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values-link {
+		width          : 48%;
+		display        : flex;
+		justify-content: center;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li.header_mobile_menu_bitcoin_values_part .header-bitcoin-values-buy {
+		margin    : 0 auto !important;
+		text-align: center;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li:hover button {
+		margin: 0 20px 20px 20px !important;
+	}
+
+	#header .wrap.new_header_mobile_menu .wrap-top-menu li a {
+		width      : 100%;
+		padding    : 20px;
+		font-size  : 17px;
+		font-family: 'Gilroy-Regular';
+		color      : white;
+		box-sizing : border-box;
+	}
+
+
+	#header.show-nav .new_header_menu .top-menu {
+		display : block;
+		position: absolute;
+	}
+
+	.new_header_menu .mobile-trigger {
+		float     : right;
+		display   : inline-block;
+		margin-top: 30px;
+	}
+
+	.new_header_menu {
+		display: none !important;
+	}
+
+	.lotterydetail .cardlist {
+		display       : flex;
+		flex-direction: column;
+		max-height    : unset;
+		margin        : 0;
+	}
+
+	.lotterydetail .cardlist .tabin_main_select {
+		flex-direction: column;
+	}
+
+
+	.lottery-result .allresult_table td:nth-of-type(5) {
+		display: unset
+	}
+
+	.lottery-result .allresult_table th {
+		padding-left: 11px !important;
+	}
+
+	body.page .main-content h1 {
+		margin-bottom: 10px;
+		margin-top   : 40px;
+	}
+
+	body.page-template-default .bg-inner {
+		display: none;
+	}
+
+	body.page .main-content h1 {
+		font-size  : 35px;
+		line-height: 1;
+	}
+
+	#user-details .table_style_1 table {
+		min-width: 600px;
+	}
+
+	/* #my_tickets_data > .drawer-header */
+
+	#tabs-5>div,
+	#tabs-4>div,
+	.table_style_1 .payment_method {
+		overflow-x: scroll;
+	}
+
+	#tabs-5 .my_table_main>div,
+	#tabs-4 .my_table_main>div {
+		min-width: 900px;
+	}
+
+	#tabs-4 .my_table_main #my_tickets_data {
+		display       : flex;
+		flex-direction: column;
+	}
+
+	#tabs-4 .my_table_main table th,
+	#tabs-4 .my_table_main table td {
+		width: 14% !important;
+	}
+
+	.table_style_1 th:nth-of-type(1),
+	td:nth-of-type(1) {
+		display: table-cell;
+	}
+
+	#user-details .table_style_1 .payment_method table tbody .payment-method-row:not(.selected)+tr td:nth-of-type(1) {
+		display: none !important;
+	}
+
+	.reg-right .fname span {
+		position: absolute;
+	}
+
+	.wrap-my-account .my-account-tabs-overlay #user-details #myaccount_detail .account_form #change_password,
+	.wrap-my-account .my-account-tabs-overlay #user-details #myaccount_detail .account_form #myaccount_update {
+		box-sizing: border-box;
+		height    : 50px;
+	}
+
+	table.tablesorter.lotteries-table.mobile-lotto-table tr td:nth-child(1),
+	table.tablesorter.lotteries-table.mobile-lotto-table tr td:nth-child(3),
+	table.tablesorter.lotteries-table.mobile-lotto-table thead tr th:nth-child(1),
+	table.tablesorter.lotteries-table.mobile-lotto-table thead tr th:nth-child(3) {
+		display: table-cell !important;
+	}
+
+	#middle.lottery-result .tablesorter-result thead tr th,
+	#middle.view-all-lottery .lotteries-table thead tr .header {
+		padding  : 10px 5px;
+		font-size: 16px;
+	}
+
+	#middle.lottery-result .tablesorter-result tbody td,
+	#middle.view-all-lottery .lotteries-table tbody td {
+		padding: 0 5px;
+	}
+
+	.lotterydetail .beton-header {
+		flex-direction : column;
+		height         : auto;
+		justify-content: center;
+		padding        : 10px;
+		box-sizing     : border-box;
+	}
+
+	.clubform.mainpaymenttabs {
+		margin-top: 0 !important;
+	}
+
+	.home-download-cash-app-section {
+		max-width: 100%;
+	}
+
+	.deposit_amount-description {
+		text-align: center;
+	}
+
+	.widthdrawpage .widthdrawmoneydown .widthdrawmoneydowninner .widthdrawmoneydowninnerwrapper {
+		flex-direction: column;
+		align-items   : center;
+	}
+
+	.widthdrawpage .widthdrawmoneydown .widthdrawmoneydowninner .widthdrawmoneydowninnerwrapper>div {
+		margin       : 0;
+		margin-bottom: 10px;
+	}
+
+	.widthdrawpage .widthdrawmoneydown .widthdrawmoneydowninner .widthdrawmoneydowninnerwrapper .howmuchwuthdrawinputtext input[type="text"] {
+		width: 100%;
+	}
+
+	.myaccount_detail_error,
+	.cardupdatemsg {
+		text-align: center;
+	}
 }
