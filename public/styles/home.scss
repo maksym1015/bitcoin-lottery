@@ -258,6 +258,26 @@
         }
     }
 }
+
+#middle_home {
+    margin-top: 40px;
+
+	& .playgroup-result {
+        display: flex;
+        margin-bottom: 40px;
+
+        & > div > h1 {
+            font-size: 30px;
+            color: #fff;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+
+        & > div {
+            height: 555px;
+        }
+    }
+}
     
     
 .lotteryresultslist-new li.block .datenum {
@@ -326,6 +346,7 @@
     }
 }
 
+
 .lotteryresultslist-new .simply-scroll-clip {
     height: 380px;
 }
@@ -352,95 +373,41 @@
     }
 }
 
+@media screen and (max-width: 1100px) {
+	#main .exclusive-lotteries {
+		max-width: 480px;
+		margin: auto;
 
+		& .lottery-container {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
 
-#contact-us-modal {
-    max-width: 400px;
-    padding: 0;
-}
+			& > div {
+				max-width: 520px;
+				margin-bottom: 40px;
+			}
+		}
+	}
 
-.modal-header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
-    border-bottom: 1px solid #dee2e6;
-    padding: 40px;
-    background: #f4f4f4;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
+	#middle_home {
+		& .playgroup-result {
+			display: flex;
+			align-items: center;
+            flex-direction: column;
+            margin-bottom: 40px;
+	
+			& .lotto-results-section, & .home-banner-new {
+				margin-top: 40px;
+            }
+		}
 
-#tc-modal .modal-header,
-#privacy-modal .modal-header {
-    padding: 20px;
-}
-
-#contact-us-modal .modal-body {
-    padding: 20px 30px;
-    line-height: 20px;
-}
-
-#contact-us-modal .modal-body a {
-    color: #007bff;
-}
-
-#contact-us-modal a.close-modal,
-#tc-modal a.close-modal,
-#privacy-modal a.close-modal {
-    display: none !important;
-}
-
-#contact-us-modal .right.close-modal,
-#tc-modal .right.close-modal,
-#privacy-modal .right.close-modal {
-    display: block !important;
-}
-
-#contact-us-modal .fa-close,
-#tc-modal .fa-close,
-#privacy-modal .fa-close {
-    color: #212529;
-    border: 2px solid #212529;;
-    padding: 4px 5px;
-    border-radius: 25px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-#tc-modal,
-#privacy-modal {
-    max-width: 100%;
-    height: 100%;
-    padding: 0;
-}
-
-#tc-modal .modal-body,
-#privacy-modal .modal-body {
-    padding: 0;
-    height: calc(100% - 100px);
-}
-
-#tc-modal .btn-ok,
-#privacy-modal .btn-ok {
-    background: #13D19C;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: Gilroy-bold;
-    font-size: 20px;
-    color: #FFFFFF;
-    padding: 12px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-links-div {
-    margin-top: 10px;
-}
-
-.social-links-div > a {
-    margin-right: 10px;
-}
-
-.social-links-div > a > img {
-    width: 33px;
+		& .wrap.loyalty_section_flex {
+			flex-direction: column;
+			
+			& > div {
+				max-width: 100%;
+			}
+		}
+	}
 }

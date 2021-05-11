@@ -54,7 +54,7 @@ export default function Home(props) {
 							<CartPopup />
 						</section>
 						<section className="wrap">
-							<div className="home-new-section-playgroup-result">
+							<div className="playgroup-result">
 								<PlayGroup />
 								<LottoResult items={results} />
 							</div>

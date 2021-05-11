@@ -1,3 +1,4 @@
+import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
 import HeaderCoin from 'components/common/header-coin';
 import supported_coins from 'data/coins.json';
@@ -7,15 +8,19 @@ import supported_coins from 'data/coins.json';
 // rendering, and avoids any flash incorrect content on initial page load.
 export default function Header() {
 
+  const [nav, setNav] = useState(false);
   const { coins } = supported_coins;
 
+  const toggleNav = useCallback(() => setNav(!nav), [nav]);
+  const cls = useMemo(() => nav ? 'show-nav clearfix' : 'clearfix', [nav]);
+
   return (
-    <header id="header" className="clearfix">
+    <header id="header" className={cls}>
       <div className='menu'>
         <div className='left_menu'>
           <Link href="/">
             <a className='logo'>
-              <img src="images/bitcoinlottery@2x-1.png" />
+              <img src="/images/bitcoinlottery@2x-1.png" />
             </a>
           </Link>
           <ul>
@@ -26,7 +31,7 @@ export default function Header() {
               <a href="/about-us">
                 About&nbsp;
 				        <svg className="arrowsvg" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-					        <path d="M1 1L6.92766 7L13 1" strokeWidth="2" />
+                  <path d="M1 1L6.92766 7L13 1" strokeWidth="2" />
                 </svg>
               </a>
               <ul className="submenu">
@@ -48,18 +53,20 @@ export default function Header() {
         </div>
         <div className="right_menu">
           <div className="login-register">
-            <button type="button" className="signin show-sign-in"><img src="images/icon-login.png" />Log in</button>
-            <button type="button" className="register show-sign-up"><img src="images/icon-register.png" />Register</button>
+            <Link href='/auth/login'><a className='signin show-sign-in'><img src="/images/icon-login.png" />Log in</a></Link>
+            <Link href='/auth/signup'><a className='register show-sign-up'><img src="/images/icon-register.png" />Register</a></Link>
+            {/* <button type="button" className="signin show-sign-in"><img src="/images/icon-login.png" />Log in</button> */}
+            {/* <button type="button" className="register show-sign-up"><img src="/images/icon-register.png" />Register</button> */}
           </div>
         </div>
       </div>
       <div className="wrap new_header_mobile_menu">
         <Link href="/">
           <a className="new_header_menu_logo">
-            <img src="images/bitcoinlottery@2x-1.png" />
-          </a>  
+            <img src="/images/bitcoinlottery@2x-1.png" />
+          </a>
         </Link>
-        <a href="#" data-href="nav" className="mobile-trigger trigger-nav">
+        <a data-href="nav" className="mobile-trigger trigger-nav" onClick={toggleNav}>
           <i>
             <span className="line-1"></span>
             <span className="line-2"></span>
@@ -88,16 +95,26 @@ export default function Header() {
               </ul>
             </li>
             <li className="">
+              <Link href='/auth/login'>
+                <a className='button'><img src="/images/icon-login.png" />Log in</a>
+              </Link>
+              {/* <Link href='/auth/signup'>
+                <a className='register show-sign-up'><img src="/images/icon-register.png" />Register</a>
+              </Link>
+
               <button type="button" className="signin show-sign-in">
-                <img src="images/icon-login.png" />
+                <img src="/images/icon-login.png" />
                 Log in
-              </button>
+              </button>*/}
             </li>
             <li>
-              <button type="button" className="register show-sign-up">
-                <img src="images/icon-register.png" />
+              <Link href='/auth/signup'>
+                <a className='button'><img src="/images/icon-register.png" />Register</a>
+              </Link>
+              {/* <button type="button" className="register show-sign-up">
+                <img src="/images/icon-register.png" />
                 Register
-              </button>
+              </button> */}
             </li>
             <li className="header_mobile_menu_bitcoin_values_part">
               <div className="header-bitcoin-values">
