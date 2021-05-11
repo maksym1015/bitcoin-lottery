@@ -1,0 +1,156 @@
+{
+    "lotteries": [
+        {
+            "id": 0,
+            "name": "MegaMillions",
+            "date": "1620255090484",
+            "image": "/images/megamillions1.png",
+            "unit": "$",
+            "amount": "83000000",
+            "link": "megamillions-lottery",
+            "country": "USA",
+            "flag": "/images/flag_europe.png"
+        },
+        {
+            "id": 1,
+            "name": "PowerBall",
+            "date": "1620265090484",
+            "image": "/images/powerball1.png",
+            "unit": "$",
+            "amount": "79000000",
+            "link": "powerball-lottery",
+            "country": "USA",
+            "flag": "/images/flag_usa.png"
+        },
+        {
+            "id": 2,
+            "name": "LaPrimitiva",
+            "date": "1620245090484",
+            "image": "/images/laprimitiva1.png",
+            "unit": "€",
+            "amount": "22500000",
+            "link": "laprimitiva-lottery",
+            "country": "Spain",
+            "flag": "/images/flag_spain.png"
+        },
+        {
+            "id": 3,
+            "name": "EuroJackpot",
+            "date": "1620248090484",
+            "image": "/images/eurojackpot1.png",
+            "unit": "€",
+            "amount": "21000000",
+            "link": "eurojackpot-lottery",
+            "country": "Europe",
+            "flag": "/images/flag_europe.png"
+        },
+        {
+            "id": 4,
+            "name": "EuroMillions",
+            "date": "1620325090484",
+            "image": "/images/euromillions1.png",
+            "unit": "€",
+            "amount": "17000000",
+            "link": "euromillions-lottery",
+            "country": "Europe",
+            "flag": "/images/flag_europe.png"
+        },
+        {
+            "id": 5,
+            "name": "SuperEnalotto",
+            "date": "1620231090484",
+            "image": "/images/superenalotto1.png",
+            "unit": "€",
+            "amount": "11800000",
+            "link": "superenalotto-lottery",
+            "country": "Italy",
+            "flag": "/images/flag_italy.png"
+        },
+        {
+            "id": 6,
+            "name": "Lotto649",
+            "date": "1620229090484",
+            "image": "/images/lotto6491.png",
+            "unit": "$",
+            "amount": "8000000",
+            "link": "lotto649-lottery",
+            "country": "Canada",
+            "flag": "/images/flag_canada.png"
+        },
+        {
+            "id": 7,
+            "name": "UkLotto",
+            "date": "1620245090484",
+            "image": "/images/uklotto1.png",
+            "unit": "€",
+            "amount": "7500000",
+            "link": "uklotto-lottery",
+            "country": "Europe",
+            "flag": "/images/flag_europe.png"
+        },
+        {
+            "id": 8,
+            "name": "NewYorkLotto",
+            "date": "1620325090484",
+            "image": "/images/newyorklotto1.png",
+            "unit": "€",
+            "amount": "7500000",
+            "link": "newyorklotto-lottery",
+            "country": "USA",
+            "flag": "/images/flag_usa.png"
+        },
+        {
+            "id": 9,
+            "name": "OzLotto",
+            "date": "1620235090484",
+            "image": "/images/ozlotto1.png",
+            "unit": "$",
+            "amount": "2000000",
+            "link": "ozlotto-lottery",
+            "country": "Australia",
+            "flag": "/images/flag_australia.png"
+        },
+        {
+            "id": 11,
+            "name": "BonoLoto",
+            "date": "1620232090484",
+            "image": "/images/bonoloto1.png",
+            "unit": "€",
+            "amount": "500000",
+            "link": "bonoloto-lottery",
+            "country": "Spain",
+            "flag": "/images/flag_spain.png"
+        },
+        {
+            "id": 13,
+            "name": "ElGordo",
+            "date": "1620325090484",
+            "image": "/images/elgordo1.png",
+            "unit": "€",
+            "amount": "500000",
+            "link": "elgordo-lottery",
+            "country": "Spain",
+            "flag": "/images/flag_spain.png"
+        }
+    ],
+    "exlottos": [
+        {
+            "id": 0,
+            "name": "BTC Jackpot",
+            "date": "1620230090484",
+            "desc": "Daily Draw 9am CET",
+            "image": "/images/megajackpot1.png",
+            "amount": "$1 Million Daily",
+            "link": "megajackpot-lottery"
+        },
+        {
+            "id": 1,
+            "name": "BTC Power Play",
+            "date": "1620245090484",
+            "desc": "Draw every 5 Minutes",
+            "image": "/images/btcpowerplay.png",
+            "amount": "$100",
+            "link": "btcpowerplay-lottery"
+        }
+    ]
+}
