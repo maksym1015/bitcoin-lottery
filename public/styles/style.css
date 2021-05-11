@@ -15891,14 +15891,6 @@ body.home .play-in-group-section {
     width: 46%;
 }
 
-.lotto-results-section h1,
-.home-new-section-playgroup-result h1 {
-    font-family  : Gilroy-Bold;
-    font-size    : 30px;
-    color        : #FFFFFF;
-    margin-bottom: 40px;
-}
-
 .home-new-section-playgroup-result {
     margin-bottom: 70px;
     display      : flex;
@@ -19536,7 +19528,6 @@ body.home #header .has-child .submenu {
     }
 
     .home-new-section-playgroup-result>div {
-        width : 100% !important;
         margin: 0 !important;
         height: auto !important;
     }
@@ -19554,10 +19545,6 @@ body.home #header .has-child .submenu {
 
     .lotto-results-section .result-lottery-titledate .name {
         font-size: 18px !important;
-    }
-
-    body.home .play-in-group-section {
-        min-width: 80%;
     }
 
     .play-in-group-section .home-banner-new {

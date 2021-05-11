@@ -32,7 +32,7 @@ export default function Footer() {
 
 			<div id="gradient-bg" className="pt-4 pb-2">
 				<div className="pb-3 text-center">
-					<img id="footer-logo" src="images/bitcoinlottery@2x-1.png" alt="Bitcoin.com" title="Bitcoin.com" height="26" style={{cursor: 'pointer'}} />
+					<img id="footer-logo" src="/images/bitcoinlottery@2x-1.png" alt="Bitcoin.com" title="Bitcoin.com" height="26" style={{ cursor: 'pointer' }} />
 				</div>
 				<div className="center-list text-center">
 					<ul className="link-list">
@@ -51,7 +51,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<div id="bottom-footer text-center">
-				<div className="footer-container">	
+				<div className="footer-container">
 					<div className="page-list text-center grayout">
 						<ul className="link-list">
 							<li><a href="/faq/">FAQ</a></li>
@@ -63,13 +63,13 @@ export default function Footer() {
 					</div>
 					<div className="payment-list text-center">
 						<ul className="link-list mt-0 mb-0">
-							<li><span className="image-aligner"><img src="images/bit-coin-2.png" /></span></li>
-							<li><span className="image-aligner"><img src="images/bit-coin-1.png" /></span></li>
+							<li><span className="image-aligner"><img src="/images/bit-coin-2.png" /></span></li>
+							<li><span className="image-aligner"><img src="/images/bit-coin-1.png" /></span></li>
 						</ul>
 					</div>
 					<div className="age-18-plus text-center grayout">
 						<span id="age-18-plus-text">
-							<img src="images/18-plus.png" />
+							<img src="/images/18-plus.png" />
 							This website is operated by Saint Bitts LLC
 						</span>
 					</div>

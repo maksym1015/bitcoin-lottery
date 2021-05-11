@@ -10,7 +10,7 @@ jQuery("#owl-download-app").owlCarousel({
     items: 1,
 });
 
-jQuery(".ico-close").click(function(e) {
+jQuery(".ico-close").click(function (e) {
     e.preventDefault();
     jQuery('.payment_cart_detail').hide();
     jQuery('#sign-in-form').hide();
@@ -19,7 +19,7 @@ jQuery(".ico-close").click(function(e) {
     jQuery('.popup-form-overlay').removeClass('active');
 });
 
-jQuery(".close-signup-signin").click(function(e) {
+jQuery(".close-signup-signin").click(function (e) {
     jQuery('.popup-form').hide();
     jQuery("#sign-up-form").hide();
     jQuery('#sign-in-form').hide();
@@ -28,50 +28,50 @@ jQuery(".close-signup-signin").click(function(e) {
     jQuery('.popup-form-overlay').removeClass('active');
 });
 
-jQuery("#close-group-lines-popup").click(function(e) {
+jQuery("#close-group-lines-popup").click(function (e) {
     jQuery('#group-lines-popup').hide();
     jQuery('' +
         '').hide();
 });
 
-jQuery(".close-iframe-button").click(function(e) {
+jQuery(".close-iframe-button").click(function (e) {
     jQuery('#popup-lottery-modal').hide();
     jQuery('.dark-blur').hide();
 });
 
-jQuery(".contact-us-modal").on("click", function() {
+jQuery(".contact-us-modal").on("click", function () {
     jQuery("#contact-us-modal").modal({
         fadeDuration: 300,
     });
 });
 
-jQuery("#contact-us-modal .fa-close").on("click", function() {
+jQuery("#contact-us-modal .fa-close").on("click", function () {
     jQuery("#contact-us-modal a.close-modal").click();
 });
 
-jQuery(".tc-modal").on("click", function() {
+jQuery(".tc-modal").on("click", function () {
     jQuery('.close-signup-signin').click();
     jQuery("#tc-modal").modal({
         fadeDuration: 300,
     });
 });
 
-jQuery("#tc-modal .fa-close").on("click", function() {
+jQuery("#tc-modal .fa-close").on("click", function () {
     jQuery("#tc-modal a.close-modal").click();
 });
 
-jQuery(".privacy-modal").on("click", function() {
+jQuery(".privacy-modal").on("click", function () {
     jQuery('.close-signup-signin').click();
     jQuery("#privacy-modal").modal({
         fadeDuration: 300,
     });
 });
 
-jQuery("#privacy-modal .fa-close").on("click", function() {
+jQuery("#privacy-modal .fa-close").on("click", function () {
     jQuery("#privacy-modal a.close-modal").click();
 });
 var btns = '.show-sign-in';
-jQuery(btns).click(function(e) {
+jQuery(btns).click(function (e) {
     //e.preventDefault();
 
     jQuery('.popup-form-overlay').removeClass('active')
@@ -81,7 +81,7 @@ jQuery(btns).click(function(e) {
     jQuery(".signin_error").empty();
     // jQuery('.blur').show();
 });
-jQuery('.show-sign-up').click(function(e) {
+jQuery('.show-sign-up').click(function (e) {
     e.preventDefault();
     //jQuery('.popup-form').hide();
     jQuery('.popup-form-overlay').removeClass('active')
@@ -91,7 +91,7 @@ jQuery('.show-sign-up').click(function(e) {
     //jQuery('.blur').show();
 });
 
-jQuery('.forgotpass').click(function(e) {
+jQuery('.forgotpass').click(function (e) {
     e.preventDefault();
     jQuery('.signin_error').empty();
     jQuery('.popup-form-overlay').removeClass('active')
@@ -104,7 +104,7 @@ jQuery('.forgotpass').click(function(e) {
 });
 
 
-jQuery('.btn-contact-us').click(function(e) {
+jQuery('.btn-contact-us').click(function (e) {
     e.preventDefault();
     //jQuery('.popup-form').hide();
     jQuery('.popup-form-overlay').removeClass('active')
@@ -114,61 +114,61 @@ jQuery('.btn-contact-us').click(function(e) {
     // jQuery('.blur').show();
 });
 
-jQuery(document).ready(function(jQuery) {
+jQuery(document).ready(function (jQuery) {
     // site preloader -- also uncomment the div in the header and the css style for #preloader
-    jQuery(window).load(function() {
-        jQuery('#preloader').fadeOut('slow', function() {
+    jQuery(window).load(function () {
+        jQuery('#preloader').fadeOut('slow', function () {
             jQuery(this).remove();
         });
     });
 
-    jQuery(document).on("click", ".custom-dropdown-menu-button", function() {
+    jQuery(document).on("click", ".custom-dropdown-menu-button", function () {
         var currentDataShow = jQuery(this).attr('data-show');
         jQuery(this).closest(".custom-dropdown-menu").find(".custom-dropdown-menu-items").toggle();
 
         if (currentDataShow === "true") {
-        	
+
             currentDataShow = "false";
-            
+
         } else if (currentDataShow === "false") {
-        
-            currentDataShow = "true"; 
+
+            currentDataShow = "true";
         }
-		
+
         jQuery(this).attr('data-show', currentDataShow);
     });
 
-    jQuery("#single").find(".dropdown-option").click(function(event) {
+    jQuery("#single").find(".dropdown-option").click(function (event) {
         event.stopPropagation();
     });
 
-    jQuery("#group").find(".group-option-row").click(function(event) {
+    jQuery("#group").find(".group-option-row").click(function (event) {
         var self = this;
         // setTimeout(function(){
         var id = jQuery(this).attr("for");
         jQuery("#group").find('#' + id).trigger("click");
     });
 
-    jQuery("#group").find(".group-dropdown-option").click(function(event) {
+    jQuery("#group").find(".group-dropdown-option").click(function (event) {
         event.stopPropagation();
     });
     // Hide dropdown menu on click outside
-    jQuery(document).on("click", function(event) {
+    jQuery(document).on("click", function (event) {
         if (!jQuery(event.target).closest(".custom-dropdown-menu-button").length) {
             jQuery(".custom-dropdown-menu-button").attr('data-show', false);
         }
     });
-    jQuery('.top-menu li').mouseover(function() {
+    jQuery('.top-menu li').mouseover(function () {
         if (!jQuery(this).hasClass('show-dd')) {
             jQuery('.nav_dropdown').hide();
         };
     });
 
-    jQuery(".playlottary ul li").on("click", function() {
+    jQuery(".playlottary ul li").on("click", function () {
         window.location = jQuery(this).find(".dd_play_button").attr("href");
     });
 
-    jQuery('.lottary-play').mouseover(function() {
+    jQuery('.lottary-play').mouseover(function () {
         jQuery('.result_info').hide();
         jQuery('.result_info .dropdown-menu').hide();
         jQuery('.playlottary').show();
@@ -177,19 +177,19 @@ jQuery(document).ready(function(jQuery) {
 
 });
 /*--------------------------------Myaccount Page Change password--------------*/
-jQuery(".u_changepassword").click(function() {
+jQuery(".u_changepassword").click(function () {
     jQuery(".account_form.change_pass").toggle("blind");
 });
 
- 
-jQuery('#start-rotation').on('click', function() {
+
+jQuery('#start-rotation').on('click', function () {
     jQuery('#horizontalTab').responsiveTabs('startRotation', 1000);
     jQuery('#horizontalTab').responsiveTabs('active');
 });
-jQuery('#stop-rotation').on('click', function() {
+jQuery('#stop-rotation').on('click', function () {
     jQuery('#horizontalTab').responsiveTabs('stopRotation');
 });
-jQuery('.select-tab').on('click', function() {
+jQuery('.select-tab').on('click', function () {
     jQuery('#horizontalTab').responsiveTabs('activate', jQuery(this).val());
 });
 
@@ -200,7 +200,7 @@ jQuery('.select-tab').on('click', function() {
  *******************************************/
 jQuery(".macloader").hide();
 
-jQuery("#myaccount_update").click(function() {
+jQuery("#myaccount_update").click(function () {
     var email = jQuery("#myaccount_detail").find('input[name=email]')
     email.val(email.val().trim());
 
@@ -225,7 +225,7 @@ jQuery("#myaccount_update").click(function() {
             url: CONFIG.adminURL,
             data: datastring,
             dataType: 'json',
-            success: function(data) {
+            success: function (data) {
                 var resp;
 
                 if (data.error_msg != undefined) {
@@ -332,7 +332,7 @@ function validatepassword() {
     }
 }
 
-jQuery("#change_password").click(function() {
+jQuery("#change_password").click(function () {
     var checkpassword = validatepassword();
     var email = jQuery("#email");
     email.val(email.val().trim());
@@ -348,7 +348,7 @@ jQuery("#change_password").click(function() {
             url: CONFIG.adminURL,
             data: datastring,
             dataType: "json",
-            success: function(data) {
+            success: function (data) {
 
                 var message = data.Result;
                 if (message === undefined) {
@@ -360,7 +360,7 @@ jQuery("#change_password").click(function() {
     }
 });
 
-jQuery(".meter > span").each(function() {
+jQuery(".meter > span").each(function () {
     jQuery(this).data("origWidth", perc)
         .width(0)
         .animate({
@@ -368,7 +368,7 @@ jQuery(".meter > span").each(function() {
         }, 1200);
 });
 
-jQuery('#horizontalTab ul li a').click(function(e) {
+jQuery('#horizontalTab ul li a').click(function (e) {
     e.preventDefault();
     jQuery('.r_tabs').hide();
     var current_tab = jQuery(this).attr("data");
@@ -376,98 +376,98 @@ jQuery('#horizontalTab ul li a').click(function(e) {
 });
 
 
-    function mainNumbersCheckForAutoclose(numberContext, rangeFunc) {
-        var mainselected = jQuery(numberContext).parent().children(".main_active").length;
-        var extraselected = jQuery(numberContext).parents(".select_num_col").find(".select_num_part_wrapper").find(".extra_active").length;
-        triggerLineClose(numberContext, mainselected, extraselected);
-    }
+function mainNumbersCheckForAutoclose(numberContext, rangeFunc) {
+    var mainselected = jQuery(numberContext).parent().children(".main_active").length;
+    var extraselected = jQuery(numberContext).parents(".select_num_col").find(".select_num_part_wrapper").find(".extra_active").length;
+    triggerLineClose(numberContext, mainselected, extraselected);
+}
 
-    function extraNumbersCheckForAutoclose(numberContext, rangeFunc) {
-        var mainselected = jQuery(numberContext).parents(".select_num_col_part").find(".lt_numbers_wrapper").children(".main_active").length;
-        var extraselected = jQuery(numberContext).parent().children(".extra_active").length;
-        triggerLineClose(numberContext, mainselected, extraselected);
-    }
-    jQuery(document).on("click", ".lt_numbers_wrapper > span", function() {
+function extraNumbersCheckForAutoclose(numberContext, rangeFunc) {
+    var mainselected = jQuery(numberContext).parents(".select_num_col_part").find(".lt_numbers_wrapper").children(".main_active").length;
+    var extraselected = jQuery(numberContext).parent().children(".extra_active").length;
+    triggerLineClose(numberContext, mainselected, extraselected);
+}
+jQuery(document).on("click", ".lt_numbers_wrapper > span", function () {
 
-        //needed in the mobile version
-        if (jQuery(this).parent().hasClass('edit-lock')) {
-            jQuery(this).parent().removeClass('edit-lock');
-            // remove lock on extra numbers
-            if (jQuery(this).parent().parent().parent().find('.select_num_part_wrapper').hasClass('edit-lock')) {
-                jQuery(this).parent().parent().parent().find('.select_num_part_wrapper').removeClass('edit-lock');
-            }
-            //triger edit mode
-            jQuery(this).parent().trigger('click');
-        } else {
+    //needed in the mobile version
+    if (jQuery(this).parent().hasClass('edit-lock')) {
+        jQuery(this).parent().removeClass('edit-lock');
+        // remove lock on extra numbers
+        if (jQuery(this).parent().parent().parent().find('.select_num_part_wrapper').hasClass('edit-lock')) {
+            jQuery(this).parent().parent().parent().find('.select_num_part_wrapper').removeClass('edit-lock');
+        }
+        //triger edit mode
+        jQuery(this).parent().trigger('click');
+    } else {
 
-            var m1 = jQuery("#m1").val();
-            var e1 = jQuery("#e1").val();
+        var m1 = jQuery("#m1").val();
+        var e1 = jQuery("#e1").val();
 
-            var mainselected = jQuery(this).parent().children(".main_active").length;
-            var extraselected = jQuery(this).parents(".select_num_col").find(".select_num_part_wrapper").find(".extra_active").length;
+        var mainselected = jQuery(this).parent().children(".main_active").length;
+        var extraselected = jQuery(this).parents(".select_num_col").find(".select_num_part_wrapper").find(".extra_active").length;
 
 
-            if (parseInt(mainselected + 1) == m1 && parseInt(extraselected) == e1) {
-                jQuery(this).parents(".select_num_col").addClass("selected");
-                totalForSingle();
-            }
+        if (parseInt(mainselected + 1) == m1 && parseInt(extraselected) == e1) {
+            jQuery(this).parents(".select_num_col").addClass("selected");
+            totalForSingle();
+        }
 
-            if (mainselected < m1) {
-                if (jQuery(this).hasClass("main_active")) {
-                    jQuery(this).removeClass("main_active");
-                    jQuery(this).parents(".select_num_col").removeClass("selected");
-                    totalForSingle();
-
-                } else {
-                    jQuery(this).addClass("main_active");
-                }
-            } else if (jQuery(this).hasClass("main_active")) {
+        if (mainselected < m1) {
+            if (jQuery(this).hasClass("main_active")) {
                 jQuery(this).removeClass("main_active");
                 jQuery(this).parents(".select_num_col").removeClass("selected");
                 totalForSingle();
 
             } else {
-                return false;
+                jQuery(this).addClass("main_active");
             }
-
-            if (isMobile) {
-                mainNumbersCheckForAutoclose(this);
-            }
-        }
-    });
-     function setNumbers(target){
-            var num = getRandomInt(m1, m);
-            for (var i = 0; i < num.length; i++) {
-                var randomID = num[i];
-
-                target.find(".lt_numbers_wrapper").children("#" + randomID).addClass("main_active");
-            }
-
-            var num1 = getRandomInt(e1, e);
-			if(num1){
-				for (var i = 0; i < num1.length; i++) {
-					var megaball = num1[i];
-
-					target.find(".select_num_part_wrapper").children("#" + megaball).addClass("extra_active");
-				}
-				var lottery = jQuery("#otherdata").val().split('|');
-				if (lottery[1].toUpperCase() == "ELGORDO") {
-					//selectSameExtraNumbers(num1[1]);
-					selectSameExtraNumbers(num1);
-				}
-			}
-
-            // Calculating total.
+        } else if (jQuery(this).hasClass("main_active")) {
+            jQuery(this).removeClass("main_active");
+            jQuery(this).parents(".select_num_col").removeClass("selected");
             totalForSingle();
+
+        } else {
+            return false;
         }
-        
-        
-        
-jQuery(document).ready(function($) {
+
+        if (isMobile) {
+            mainNumbersCheckForAutoclose(this);
+        }
+    }
+});
+function setNumbers(target) {
+    var num = getRandomInt(m1, m);
+    for (var i = 0; i < num.length; i++) {
+        var randomID = num[i];
+
+        target.find(".lt_numbers_wrapper").children("#" + randomID).addClass("main_active");
+    }
+
+    var num1 = getRandomInt(e1, e);
+    if (num1) {
+        for (var i = 0; i < num1.length; i++) {
+            var megaball = num1[i];
+
+            target.find(".select_num_part_wrapper").children("#" + megaball).addClass("extra_active");
+        }
+        var lottery = jQuery("#otherdata").val().split('|');
+        if (lottery[1].toUpperCase() == "ELGORDO") {
+            //selectSameExtraNumbers(num1[1]);
+            selectSameExtraNumbers(num1);
+        }
+    }
+
+    // Calculating total.
+    totalForSingle();
+}
+
+
+
+jQuery(document).ready(function ($) {
 
     var menu_collapse = false;
 
-    $('.arrow_down_button').on('click', function() {
+    $('.arrow_down_button').on('click', function () {
         if ($(this).closest('li.has-child.mobile-menu').hasClass('active')) {
             $('li.has-child.mobile-menu').removeClass('active');
         } else {
@@ -477,32 +477,31 @@ jQuery(document).ready(function($) {
     })
 
 
-    $('.mobile-trigger').on('click', function(e) {
-        e.preventDefault();
-        var headerHeight = $('header').innerHeight();
-        var toggleClass = `show-${$(this).data('href')}`;
-        var menuItemsHeight = $('#menu-container > .wrap-top-menu').innerHeight();
+    // $('.mobile-trigger').on('click', function(e) {
+    //     e.preventDefault();
+    //     var headerHeight = $('header').innerHeight();
+    //     var toggleClass = `show-${$(this).data('href')}`;
+    //     var menuItemsHeight = $('#menu-container > .wrap-top-menu').innerHeight();
 
-        if (!menu_collapse) {
-            // menu_collapse = true;
-            if ( !$('#header').is(`.${toggleClass}`) ) {
-                $('#header').addClass( toggleClass );
-                // $('html').css({'overflow-y': 'hidden'})
-                // $('#menu-container').animate({
-                //     height: menuItemsHeight
-                // }, 500, function() {
-                //     menu_collapse = false;
-                // })
-            } else {
-                $('#header').removeClass( toggleClass );
-                // $('html').css({'overflow-y': 'auto'})
-                // $('#menu-container').animate({
-                //     height: 0
-                // }, 500, function() {
-                //     menu_collapse = false;
-                // })
-            }
-        }
-    });
+    //     if (!menu_collapse) {
+    //         // menu_collapse = true;
+    //         if ( !$('#header').is(`.${toggleClass}`) ) {
+    //             $('#header').addClass( toggleClass );
+    //             // $('html').css({'overflow-y': 'hidden'})
+    //             // $('#menu-container').animate({
+    //             //     height: menuItemsHeight
+    //             // }, 500, function() {
+    //             //     menu_collapse = false;
+    //             // })
+    //         } else {
+    //             $('#header').removeClass( toggleClass );
+    //             // $('html').css({'overflow-y': 'auto'})
+    //             // $('#menu-container').animate({
+    //             //     height: 0
+    //             // }, 500, function() {
+    //             //     menu_collapse = false;
+    //             // })
+    //         }
+    //     }
+    // });
 });
-    
