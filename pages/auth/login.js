@@ -33,6 +33,7 @@ const LoginPage = () => {
 		<Layout>
 			<main className={styles.container}>
 				<form className={styles.form}>
+					<Link href='/'><a className={styles.close}></a></Link>
 					<h1>Log in with your account</h1>
 					<section className={styles.inputGroup}>
 						<Input
@@ -67,9 +68,6 @@ const LoginPage = () => {
 							Log in
 						</Button>
 						<section className={styles.actionLinks}>
-							<a className={styles.link} href='/'>
-								&lt;&lt;Home
-							</a>
 							<a className={styles.link} href='/auth/reset-password'>
 								Forgot password?
 							</a>
