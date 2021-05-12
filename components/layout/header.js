@@ -22,8 +22,8 @@ export default function Header() {
             <img src="/images/bitcoinlottery@2x-1.png" />
           </a>
           <ul>
-            <li className=""><Link href="/lottery">Lottery</Link></li>
-            <li className=""><Link href="/lottery-results">Results</Link></li>
+            <li className=""><a href="/lottery">Lottery</a></li>
+            <li className=""><a href="/lottery-results">Results</a></li>
             <li className="has-child">
               <a href="/about-us">
                 About&nbsp;
@@ -40,9 +40,9 @@ export default function Header() {
           </ul>
           <div className="header-bitcoin-values">
             {coins && coins.map(coin => (
-              <Link key={coin.id} href="/lottery">
-                <a className='link'><HeaderCoin {...coin} /></a>
-              </Link>
+              <a key={coin.id} href="/lottery" className='link'>
+                <HeaderCoin {...coin} />
+              </a>
             ))}
             {/* <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a> */}
             <a href="#" className="header-bitcoin-values-buy show-sign-in deposit-page-nav-btn">Deposit Now</a>

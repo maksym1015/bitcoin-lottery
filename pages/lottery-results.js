@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link';
 import Layout from 'components/layout';
-
-import { parseJsonFile } from 'helpers/json';
+import { formatDate } from 'helpers/dateformat';
+import { getResultsByBrand } from 'service/globalinfo';
 
 export default function LotteryResultsPage({ results }) {
 	return (
@@ -31,7 +31,7 @@ export default function LotteryResultsPage({ results }) {
 												<tr>
 													<td><img src={item.flag ?? '/images/logo-icon.svg'} />&nbsp;&nbsp;{item.country}</td>
 													<td><a href={`/${item.name.toLowerCase()}-results`}>{item.name}</a></td>
-													<td>{item.date}</td>
+													<td>{formatDate(new Date(item.date))}</td>
 													<td>{item.earned.unit}&nbsp;{item.earned.amount}</td>
 													<td>
 														<div className="result_number">
@@ -73,11 +73,56 @@ export default function LotteryResultsPage({ results }) {
 }
 
 export const getStaticProps = async (ctx) => {
+	try {
+		const res = await getResultsByBrand();
+		const results = res.filter(item => (
+			item.LotteryTypeId !== 13 && item.LotteryTypeId !== 24 &&
+			item.LotteryTypeId !== 27 && item.LotteryTypeId !== 36
+		)).map(item => {
+			let scores = null;
+			if (item.WinningResult) {
+				const arr = item.WinningResult.split(/,|#/g);
+				if (arr.length <= 1) scores = + item.WinningResult;
+				else {
+					let arr = item.WinningResult.split('#');
+					scores = arr[0].split(',').map(item => ({
+						color: 'blue', value: parseInt(item)
+					}));
+					arr[1].length > 0 && arr[1].split(',').forEach(item => {
+						scores.push({ color: 'green', value: parseInt(item) });
+					});
+				}
+			}
 
-	const results = await parseJsonFile('data/results.json');
-	return {
-		props: {
-			results: results.items,
+			let flag = `/images/flag_${item.CountryName}.png`;
+			if (item.LotteryName.includes('BTC Power Play') ||
+				item.LotteryName.includes('MegaJackpot') ||
+				item.LotteryName.includes('Raffle')) flag = null;
+
+			return {
+				name: item.LotteryName,
+				image: `/images/${item.LotteryName.toLowerCase()}1.png`,
+				country: item.CountryName,
+				code: item.CountryCode,
+				date: item.DrawDate,
+				earned: { unit: item.LotteryCurrency, amount: item.RollOver },
+				scores, flag
+			}
+		});
+
+		return {
+			props: {
+				results
+			},
+			revalidate: 10
+		}
+	} catch (error) {
+		console.log(error);
+		return {
+			props: {
+				results: []
+			},
+			revalidate: 10
 		}
 	}
 }
