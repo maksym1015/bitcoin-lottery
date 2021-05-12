@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect } from 'react';
 import Link from 'next/link';
 import Layout from 'components/layout';
-import { parseJsonFile } from 'helpers/json';
 import format from 'format-number';
 import dateFormat from 'dateformat';
+import { getAllDraws } from 'service/globalinfo';
 
 const formatter = format();
 export default function LotteryPage({ lotteries }) {
@@ -33,7 +33,7 @@ export default function LotteryPage({ lotteries }) {
 										{lotteries && lotteries.map(item => (
 											<Fragment key={item.id}>
 												<tr>
-													<td><img src={item.flag} />&nbsp;Europe</td>
+													<td><img src={item.flag} />&nbsp;{item.country}</td>
 													<td className="lottery">{item.name}</td>
 													<td>{dateFormat(new Date(parseInt(item.date)), 'dd/mm/yyyy')}</td>
 													<td>
@@ -92,12 +92,41 @@ export default function LotteryPage({ lotteries }) {
 
 export const getStaticProps = async (ctx) => {
 
-	const lotteries = await parseJsonFile('data/lotteries.json');
-	return {
-		props: {
-			lotteries: lotteries.lotteries
+	try {
+		const draws = await getAllDraws();
+		const lotteries = draws.filter(draw => !(
+			draw.LotteryName == 'BTC Power Play' || draw.LotteryName == 'MegaJackpot' || draw.LotteryName == 'BTC Raffle 50'
+			|| draw.LotteryName == 'BTC Raffle 100' || draw.LotteryName == 'BTC Raffle 200' || draw.LotteryName == 'BTC Raffle 500'
+			|| draw.LotteryName == 'BTC Raffle 1000' || draw.LotteryName == 'BTC Raffle 2500' || draw.LotteryName == 'BTC Raffle 5000'
+			|| draw.LotteryName == 'BTC Raffle 10000' || draw.LotteryName == 'BTC Raffle 20000' || draw.LotteryName == 'BTC Raffle 25'
+			|| draw.LotteryName == 'BTC Raffle' || draw.Jackpot < 0 || draw.LotteryName == 'BTC Raffle 25000'
+		)).map(draw => ({
+			id: draw.DrawId,
+			name: draw.LotteryName,
+			date: new Date(draw.DrawDate).getTime(),
+			image: `/images/${draw.LotteryName.toLowerCase()}1.png`,
+			unit: draw.LotteryCurrency2,
+			amount: draw.Jackpot,
+			link: `${draw.LotteryName.toLowerCase()}-lottery`,
+			country: draw.CountryName,
+			flag: `/images/flag_${draw.CountryName.toLowerCase()}.png`
+		}));
+		return {
+			props: {
+				lotteries
+			},
+			revalidate: 10
+		}
+	} catch (error) {
+		console.log(error);
+		return {
+			props: {
+				lotteries: [],
+			},
+			revalidate: 10
 		}
 	}
+
 }
 
 // export async function getServerSideProps() {
