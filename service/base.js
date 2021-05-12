@@ -10,7 +10,7 @@ export const authPost = (url, token, body = {}) => {
             'Content-Type': 'application/json',
             Token: token
         },
-        body,
+        body: JSON.stringify(body),
         agent: httpsAgent
     }).then(res => res.json());
 }
