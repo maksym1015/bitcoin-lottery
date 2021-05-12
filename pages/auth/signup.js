@@ -32,7 +32,7 @@ const SignupPage = () => {
 		<Layout>
 			<main className={styles.container}>
 				<form className={styles.form}>
-					<Link href='/'><a className={styles.close}></a></Link>
+					<a href='/' className={styles.close}></a>
 					<h1>Welcome</h1>
 					<section className={styles.inputGroup}>
 						<Input
@@ -66,16 +66,19 @@ const SignupPage = () => {
 					<section className={styles.actionGroup}>
 						<Button className={styles.submit} onClick={handleSubmit}>
 							Sign up
-							</Button>
+						</Button>
 					</section>
 					<section className={styles.tc}>
 						<span>
-							By creating a new account I accept the <a href='/help/terms' className={styles.link}>terms and conditions</a>, the <a href='/help/privacy' className={styles.link}>privacy policy </a>and confirm that I am over 18 years of age. It is an offence to gamble if under age. <a href='/help/gamble' className={styles.link}>Gamble Responsibly</a>.
-							</span>
+							By creating a new account I accept the <Link href='/help/terms'><a className={styles.link}>terms and conditions</a></Link>, the <Link href='/help/privacy'><a className={styles.link}>privacy policy </a></Link>and confirm that I am over 18 years of age. It is an offence to gamble if under age. <Link href='/help/gamble'><a className={styles.link}>Gamble Responsibly</a></Link>.
+						</span>
 					</section>
 					<section className={styles.actionLinks}>
 						<span>
-							Have an account? <a className={styles.link} href='/auth/login'>Log in</a>
+							Have an account?
+							<Link href='/auth/login'>
+								<a className={styles.link}>&nbsp;Log in</a>
+							</Link>
 						</span>
 					</section>
 				</form>

@@ -18,11 +18,9 @@ export default function Header() {
     <header id="header" className={cls}>
       <div className='menu'>
         <div className='left_menu'>
-          <Link href="/">
-            <a className='logo'>
-              <img src="/images/bitcoinlottery@2x-1.png" />
-            </a>
-          </Link>
+          <a className='logo' href="/">
+            <img src="/images/bitcoinlottery@2x-1.png" />
+          </a>
           <ul>
             <li className=""><Link href="/lottery">Lottery</Link></li>
             <li className=""><Link href="/lottery-results">Results</Link></li>
@@ -52,8 +50,8 @@ export default function Header() {
         </div>
         <div className="right_menu">
           <div className="login-register">
-            <Link href='/auth/login'><a className='signin show-sign-in'><img src="/images/icon-login.png" />Log in</a></Link>
-            <Link href='/auth/signup'><a className='register show-sign-up'><img src="/images/icon-register.png" />Register</a></Link>
+            <a href='/auth/login' className='signin show-sign-in'><img src="/images/icon-login.png" />Log in</a>
+            <a href='/auth/signup' className='register show-sign-up'><img src="/images/icon-register.png" />Register</a>
             {/* <button type="button" className="signin show-sign-in"><img src="/images/icon-login.png" />Log in</button> */}
             {/* <button type="button" className="register show-sign-up"><img src="/images/icon-register.png" />Register</button> */}
           </div>
@@ -93,9 +91,7 @@ export default function Header() {
               </ul>
             </li>
             <li className="">
-              <Link href='/auth/login'>
-                <a className='button'><img src="/images/icon-login.png" />Log in</a>
-              </Link>
+              <a href='/auth/login' className='button'><img src="/images/icon-login.png" />Log in</a>
               {/* <Link href='/auth/signup'>
                 <a className='register show-sign-up'><img src="/images/icon-register.png" />Register</a>
               </Link>
@@ -106,9 +102,7 @@ export default function Header() {
               </button>*/}
             </li>
             <li>
-              <Link href='/auth/signup'>
-                <a className='button'><img src="/images/icon-register.png" />Register</a>
-              </Link>
+              <a href='/auth/signup' className='button'><img src="/images/icon-register.png" />Register</a>
               {/* <button type="button" className="register show-sign-up">
                 <img src="/images/icon-register.png" />
                 Register

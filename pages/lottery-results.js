@@ -34,7 +34,7 @@ export default function LotteryResultsPage({ results }) {
 													<td>{item.date}</td>
 													<td>{item.earned.unit}&nbsp;{item.earned.amount}</td>
 													<td>
-														<div class="result_number">
+														<div className="result_number">
 															<ul>
 																{item.scores && Array.isArray(item.scores) && item.scores.map((score, idx) => (
 																	<li
@@ -49,7 +49,7 @@ export default function LotteryResultsPage({ results }) {
 														</div>
 													</td>
 												</tr>
-												<tr class="spacer"></tr>
+												<tr className="spacer"></tr>
 											</React.Fragment>
 										))}
 									</tbody>

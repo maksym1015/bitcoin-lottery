@@ -43,7 +43,9 @@ const ResetPassword = () => {
 						</Button>
 					</section>
 					<section className={styles.actionLinks}>
-						<a className={styles.link} href='/auth/login'>Log in</a>
+						<Link href='/auth/login'>
+							<a className={styles.link}>Log in</a>
+						</Link>
 					</section>
 				</form>
 			</main>
