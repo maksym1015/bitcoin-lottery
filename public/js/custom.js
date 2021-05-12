@@ -70,26 +70,6 @@ jQuery(".privacy-modal").on("click", function () {
 jQuery("#privacy-modal .fa-close").on("click", function () {
     jQuery("#privacy-modal a.close-modal").click();
 });
-var btns = '.show-sign-in';
-jQuery(btns).click(function (e) {
-    //e.preventDefault();
-
-    jQuery('.popup-form-overlay').removeClass('active')
-    jQuery(".popup-form-overlay.sign-in").addClass('active');
-    jQuery("#sign-in-form").show();
-    jQuery('#header').removeClass('show-nav');
-    jQuery(".signin_error").empty();
-    // jQuery('.blur').show();
-});
-jQuery('.show-sign-up').click(function (e) {
-    e.preventDefault();
-    //jQuery('.popup-form').hide();
-    jQuery('.popup-form-overlay').removeClass('active')
-    jQuery(".popup-form-overlay.sign-up").addClass('active');
-    jQuery("#sign-up-form").show();
-    jQuery('#header').removeClass('show-nav');
-    //jQuery('.blur').show();
-});
 
 jQuery('.forgotpass').click(function (e) {
     e.preventDefault();

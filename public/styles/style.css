@@ -3970,41 +3970,6 @@ h4 {
     background  : #fff;
 }
 
-#header .wrap-cta [class^='show-sign-in']:hover .ico-sign-in {
-    width       : 16px;
-    height      : 16px;
-    background  : url('/images/signin1.png') no-repeat;
-    margin-right: 5px;
-}
-
-#header .wrap-cta [class^='show-sign-up']:hover .ico-sign-up {
-    width       : 12px;
-    height      : 16px;
-    background  : url('/images/signup1.png') no-repeat;
-    margin-right: 5px;
-}
-
-#header .wrap-cta [class^='show-sign-']:hover,
-[class*=' show-sign-']:hover {
-    color: #000;
-}
-
-#header .wrap-cta .show-sign-in {
-    float        : left;
-    border-radius: 0px;
-    width        : 80px;
-}
-
-button.show-sign-in:hover {
-    margin: 0px !important;
-}
-
-#header .wrap-cta .show-sign-up {
-    float        : left;
-    border-radius: 0px;
-    width        : 80px;
-}
-
 /* ------------------------------------------------------------ *\
    Lang Selector
 \* ------------------------------------------------------------ */
@@ -13092,19 +13057,6 @@ h2.play-jackpot {
 
 .l-link-arrow-left:hover:after {
     left: 0;
-}
-
-a.show-sign-up {
-    text-decoration: none;
-    color          : #69a507;
-}
-
-a.show-sign-up:hover {
-    color                             : #3f6304;
-    background-color                  : transparent;
-    text-decoration                   : none;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function        : ease-in;
 }
 
 @media (min-width: 320px) {
