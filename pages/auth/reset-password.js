@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import Layout from 'components/layout';
 import { Input, Button } from 'components/form/form-control';
@@ -23,6 +24,7 @@ const ResetPassword = () => {
 		<Layout>
 			<main className={styles.container}>
 				<form className={styles.form}>
+					<Link href='/'><a className={styles.close}></a></Link>
 					<h1>Forgot your password?</h1>
 					<section className={styles.inputGroup}>
 						<Input
@@ -41,7 +43,6 @@ const ResetPassword = () => {
 						</Button>
 					</section>
 					<section className={styles.actionLinks}>
-						<a className={styles.link} href='/'>&lt;&lt;Home</a>
 						<a className={styles.link} href='/auth/login'>Log in</a>
 					</section>
 				</form>

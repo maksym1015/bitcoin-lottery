@@ -26,7 +26,6 @@ export default function Header() {
           <ul>
             <li className=""><Link href="/lottery">Lottery</Link></li>
             <li className=""><Link href="/lottery-results">Results</Link></li>
-            <li className=""><Link href="https://cashgames.bitcoin.com/home" target="_blank">Casino</Link></li>
             <li className="has-child">
               <a href="/about-us">
                 About&nbsp;
@@ -47,7 +46,7 @@ export default function Header() {
                 <a className='link'><HeaderCoin {...coin} /></a>
               </Link>
             ))}
-            <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a>
+            {/* <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a> */}
             <a href="#" className="header-bitcoin-values-buy show-sign-in deposit-page-nav-btn">Deposit Now</a>
           </div>
         </div>
@@ -77,7 +76,6 @@ export default function Header() {
           <ul className="wrap-top-menu">
             <li className=""><a href="/lottery">Lottery</a></li>
             <li className=""><a href="/lottery-results">Results</a></li>
-            <li className=""><a href="https://cashgames.bitcoin.com/home" target="_blank">Casino</a></li>
             <li className="has-child mobile-menu">
               <div>
                 <a href="/about-us">About</a>
@@ -124,7 +122,7 @@ export default function Header() {
                     <a className='link'><HeaderCoin {...coin} /></a>
                   </Link>
                 ))}
-                <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a>
+                {/* <a href="https://buy.bitcoin.com" className="header-bitcoin-values-buy" target="_blank">Buy Bitcoin</a> */}
               </div>
             </li>
           </ul>

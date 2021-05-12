@@ -32,6 +32,7 @@ const SignupPage = () => {
 		<Layout>
 			<main className={styles.container}>
 				<form className={styles.form}>
+					<Link href='/'><a className={styles.close}></a></Link>
 					<h1>Welcome</h1>
 					<section className={styles.inputGroup}>
 						<Input
@@ -73,9 +74,6 @@ const SignupPage = () => {
 							</span>
 					</section>
 					<section className={styles.actionLinks}>
-						<a className={styles.link} href='/'>
-							&lt;&lt;Home
-							</a>
 						<span>
 							Have an account? <a className={styles.link} href='/auth/login'>Log in</a>
 						</span>
